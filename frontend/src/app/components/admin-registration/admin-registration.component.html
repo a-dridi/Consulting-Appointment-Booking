@@ -1,0 +1,56 @@
+<div>
+    <div class="col-md-6 m-auto">
+        <div class="card card-body">
+            <h1 class="text-center mb-3">
+                Register Admin Account
+            </h1>
+            <h3>You can register only one admin account, that can be used to view your agent/admin dashboard.</h3>
+            <br>
+            <div *ngIf="adminaccountregistered">
+                <h2 style="color: red">Admin account is already registered. Please use your admin account credentials to login. </h2>
+            </div>
+            <form [formGroup]="registrationForm" class="register-form" *ngIf="!adminaccountregistered">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <br>
+                    <input type="name" id="name" matInput placeholder="Enter Name" formControlName="name" #name>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <br>
+                    <input type="email" id="email" matInput placeholder="Enter Email" formControlName="email" #email>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password: </label>
+                    <br>
+                    <input type="password" id="password" matInput placeholder="Enter Password"
+                        formControlName="password" #password>
+                </div>
+                <div class="form-group">
+                    <label for="password2">Confirm Password: </label>
+                    <br>
+                    <input type="password" id="password2" matInput placeholder="Enter Password again"
+                        formControlName="password2" #password2>
+                </div>
+                <div class="form-group">
+                    <label for="telephone">Telephone (optional): </label>
+                    <br>
+                    <input type="telephone" id="telephone" matInput placeholder="Enter Telephone number"
+                        formControlName="telephone" #telephone>
+                </div>
+                <div class="form-group">
+                    <label for="note">Note (optional): </label>
+                    <br>
+                    <input type="note" id="note" matInput placeholder="Optional note"
+                        formControlName="note" #note>
+                </div>
+
+                <button type="submit" (click)="registeradmin(email.value, password.value, password2.value, name.value, telephone.value, note.value)"
+                     mat-raised-button color="primary"
+                    class="button-submit-login">Register</button>
+
+            </form>
+            <p class="lead mt-4">You Have An Admin Account? <a href="/admin-login">Login</a></p>
+        </div>
+    </div>
+</div>

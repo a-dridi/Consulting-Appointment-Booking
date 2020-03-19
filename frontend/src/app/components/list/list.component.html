@@ -1,0 +1,60 @@
+<div>
+    <mat-card class="container-appointment-main">
+        <div *ngIf="adminUserAuthenticated">
+            <button mat-raised-button color="orange" routerLink="/create">
+                <mat-icon aria-label="Add icon">add_box</mat-icon> Add new appointment
+            </button>
+            <button mat-raised-button color="orange" routerLink="/admin" style="margin-left: 25px;">
+                <mat-icon aria-label="Dashboard icon">dashboard</mat-icon> Admin Dashboard
+            </button>
+            <br>
+            <br>
+            <mat-divider></mat-divider>
+        </div>
+        <br>
+        <table mat-table [dataSource]="appointments">
+            <ng-container matColumnDef="date">
+                <th mat-header-cell *matHeaderCellDef class="main-column-appointment">Date</th>
+                <td mat-cell *matCellDef="let element" class="main-column-appointment">
+                    {{element.date | date: "dd.MM.yyyy HH:mm"}}</td>
+            </ng-container>
+            <ng-container matColumnDef="name">
+                <th mat-header-cell *matHeaderCellDef>Name</th>
+                <td mat-cell *matCellDef="let element"> {{element.name}}</td>
+            </ng-container>
+            <ng-container matColumnDef="description">
+                <th mat-header-cell *matHeaderCellDef>Description</th>
+                <td mat-cell *matCellDef="let element"> {{element.description}}</td>
+            </ng-container>
+            <ng-container matColumnDef="rate">
+                <th mat-header-cell *matHeaderCellDef>Rate in $ (USD)</th>
+                <td mat-cell *matCellDef="let element"> {{element.rate}}</td>
+            </ng-container>
+
+            <ng-container matColumnDef="book">
+                <th mat-header-cell *matHeaderCellDef class="main-column-appointment">Book now</th>
+                <td mat-cell *matCellDef="let element"> <button mat-button color="blue"
+                        (click)="bookAppointment(element._id)">Book</button></td>
+            </ng-container>
+
+            <ng-container matColumnDef="edit-delete" *ngIf="adminUserAuthenticated">
+                <th mat-header-cell *matHeaderCellDef class="mat-column-right">Edit/Delete</th>
+                <td mat-cell *matCellDef="let element" class="mat-column-right">
+                    <button mat-button color="primary" (click)="editAppointment(element._id)">Edit</button>
+                    <button mat-button color="warn" (click)="deleteAppointment(element._id)">Delete</button>
+                </td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="appointmentColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: appointmentColumns;"></tr>
+
+        </table>
+
+        <div *ngIf="appointments.length < 1">
+            <h4 style="text-align: center; margin-top: 10px;">There are no available appointments at the moment. Please come back later.</h4>
+        </div>
+
+    </mat-card>
+
+
+</div>

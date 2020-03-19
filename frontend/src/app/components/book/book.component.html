@@ -1,0 +1,43 @@
+<div>
+    <br>
+    <mat-card class="container-appointment-main">
+        <section class="mat-typograhy">
+            <h3>Book this appointment</h3>
+        </section>
+        <mat-divider></mat-divider>
+        <br>
+        <p style="font-weight: bold">Click on the button below to pay and book the following appointment: </p>
+        <br>
+
+        <div class="field-full-width">
+            <mat-label>Time - Date: </mat-label>
+            <h4>{{selectedDate | date: "HH:mm - dd.MM.yyyy"}}</h4>
+        </div>
+
+        <div class="field-full-width">
+            <mat-label>Name: </mat-label>
+            <h4>{{selectedName}}</h4>
+        </div>
+
+        <div class="field-full-width">
+            <mat-label>Description: </mat-label>
+            <h4>{{selectedDescription}}</h4>
+        </div>
+
+        <div class="field-full-width">
+            <mat-label>Rate in USD $: </mat-label>
+            <h4>{{selectedRate}}</h4>
+        </div>
+
+        <mat-divider>
+        </mat-divider>
+
+        <br>
+        <div class="progress-loader" [hidden]="!loading">
+            <mat-progress-spinner [mode]="'indeterminate'">
+            </mat-progress-spinner>
+        </div>
+        <button *ngIf="!this.loading" (click)="bookAndPayAppointment()" mat-raised-button color="primary"
+                class="button-submit-appointment"><img src="https://www.paypalobjects.com/webstatic/en_US/i/buttons/checkout-logo-medium.png" alt="Check out with PayPal" style="margin-right: 10px; height: 25px"/> Book</button>
+    </mat-card>
+</div>

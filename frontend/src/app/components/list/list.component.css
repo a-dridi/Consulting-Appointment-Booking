@@ -1,0 +1,15 @@
+table {
+    width: 100%
+}
+
+.mat-column-right {
+    text-align: center;
+}
+
+.container-appointment-main {
+    display: inherit;
+}
+
+.main-column-appointment {
+    font-weight: bold;
+}

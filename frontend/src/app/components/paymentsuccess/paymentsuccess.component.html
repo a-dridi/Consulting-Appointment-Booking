@@ -1,0 +1,37 @@
+<div class="card-container-centered">
+    <mat-card class="payment-successfull-header">
+        <h4>Payment was successfull</h4>
+    </mat-card>
+    <mat-divider></mat-divider>
+    <mat-card>
+        <div class="field-full-width">
+            Your appointment (id: {{bookedappointment._id}}) was successfully booked.
+        </div>
+        <br />
+        <mat-divider></mat-divider>
+        <br />
+        <div class="field-full-width" style="font-weight: bold">
+            <mat-label>Time - Date: </mat-label>
+            <h4>{{bookedappointment.date | date: "HH:mm - dd.MM.yyyy"}}</h4>
+        </div>
+
+        <div class="field-full-width">
+            <mat-label>Name: </mat-label>
+            <h4>{{bookedappointment.name}}</h4>
+        </div>
+
+        <div class="field-full-width">
+            <mat-label>Description: </mat-label>
+            <h4>{{bookedappointment.description}}</h4>
+        </div>
+
+        <div class="field-full-width">
+            <mat-label>Rate in USD $: </mat-label>
+            <h4>{{bookedappointment.rate}}</h4>
+        </div>
+        <br />
+        <button mat-raised-button color="accent" routerLink="/" class="button-back"> < Back</button>
+                <button mat-raised-button color="primary" onclick="window.print(); "><i class="fa fa-print" aria-hidden="true"></i> Print</button>
+
+    </mat-card>
+</div>

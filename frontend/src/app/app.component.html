@@ -1,0 +1,32 @@
+<mat-toolbar id="headerToolbar">
+  <div style="flex-grow: 5;">
+  <span id="titleWebsite"><img src="assets/img/logo.png" width="30px" style="margin-top: 10px" /> <a href="/"
+      style="text-decoration: none; color: brown">The Consulting Company</a></span>
+      </div>
+  <div style="flex-grow: 1;" *ngIf="!adminLoggedIn">
+    <span><a href="/admin" id=adminsectionLink>Agent (Admin) section </a></span>
+  </div>
+  <div style="flex-grow: 1;" *ngIf="adminLoggedIn">
+    <span><a href="/admin-logout" id=adminsectionLink>Logout </a></span>
+  </div>
+</mat-toolbar>
+
+<div>
+  <router-outlet></router-outlet>
+</div>
+
+<mat-toolbar class="footer-section">
+  <mat-toolbar-row>
+    <span>Made with </span>
+    <mat-icon class="example-icon" aria-hidden="false" aria-label="heart icon"
+      style="margin-left: 5px; height:14px;font-size: 14px;">favorite</mat-icon>
+    <span>by a.dridi (github.com/a-dridi)</span>
+  </mat-toolbar-row>
+  <mat-toolbar-row>
+    <li class="footer-links">
+      <ul><a href="#">General notice</a></ul>
+      <ul><a href="#">Data privacy</a></ul>
+      <ul><a href="#">Contact</a></ul>
+    </li>
+  </mat-toolbar-row>
+</mat-toolbar>
