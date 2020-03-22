@@ -8,6 +8,8 @@ A web app (MEAN stack) to administrate and book consulting appointments.
 There as a demo version available:
 https://fast-woodland-47882.herokuapp.com/
 
+Admin user account: max.mustermann@mydomain.net - Password: 123456
+
 ## Features
 * Clients can book an appointment without registration
 * Book appointment and pay through Paypal

@@ -4,7 +4,7 @@
       style="text-decoration: none; color: brown">The Consulting Company</a></span>
       </div>
   <div style="flex-grow: 1;" *ngIf="!adminLoggedIn">
-    <span><a href="/admin" id=adminsectionLink>Agent (Admin) section </a></span>
+    <span><a [routerLink]="" (click)="showAdminAgentPage()" id=adminsectionLink>Agent (Admin) section </a></span>
   </div>
   <div style="flex-grow: 1;" *ngIf="adminLoggedIn">
     <span><a href="/admin-logout" id=adminsectionLink>Logout </a></span>

@@ -164,11 +164,11 @@ router.route("/login").post((req, res, next) => {
 
 
 // Logout
-router.get('/logout', function (req, res, next) {
+router.route('/logout').get((req, res, next) => {
     if (isAdminUserAuthenticated(req, res, next)) {
         req.logout();
-        res.redirect('allappointments');
-        //res.json("Logout was successful.");
+        res.json("Logout was successful.");
+      //res.redirect('allappointments');
     }
 })
 
@@ -177,7 +177,7 @@ router.get('/logout', function (req, res, next) {
 //Admin section
 router.route("/admin").get((req, res, next) => {
     isAdminUserAuthenticated(req, res, next);
-    //return res.status(200).json(req.user);
+    return res.status(200).json(req.user);
 })
 
 //DATABASE CONNECTION SETTINGS -- EDIT THIS
@@ -474,6 +474,26 @@ router.route("/client/:id").get((req, res) => {
         }
     })
 });
+
+//updateTelephoneOfOneClient
+router.route("/client/updatephone/:id").post((req, res) => {
+    Client.findById(req.params.id, (err, client) => {
+        if (!client) {
+            return next(new Error("Could not load client from database"));
+        } else {
+            client.telephone = req.body.telephone;
+
+            client.save()
+                .then(client => {
+                    res.json("Client telephone number was successfully updated.")
+                })
+                .catch(err => {
+                    res.status(400).update("Update failed. ");
+                });
+
+        }
+    });
+})
 
 //getBookedAppointmentsClients:
 router.route("/bookedappointmentsclients").get((req, res) => {

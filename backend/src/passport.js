@@ -1,5 +1,5 @@
 const LocalStrategy = require('passport-local').Strategy;
-import AdminAccount from "./models/AdminAccount";
+import AdminAccount from "./models/adminaccount";
 const bcrypt = require('bcryptjs');
 
 module.exports = function (passport) {

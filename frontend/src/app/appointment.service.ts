@@ -80,17 +80,8 @@ export class AppointmentService {
     })
   }
 
-  /*
-  doAdminLogin(email, password) {
-    const adminaccount = {
-      email: email,
-      password: password
-    };
-    return this.http.post(`${this.uri}/login`, adminaccount);
-  }
-*/
-  doAdminLogin(body: any) {
 
+  doAdminLogin(body: any) {
     return this.http.post(`${this.uri}/login`, body, {
       observe: 'body',
       withCredentials: true,
@@ -100,7 +91,7 @@ export class AppointmentService {
 
 
   doAdminLogout() {
-    return this.http.post(`${this.uri}/logout`, {
+    return this.http.get(`${this.uri}/logout`, {
       observe: 'body',
       withCredentials: true,
       headers: new HttpHeaders().append('Content-Type', 'application/json')
