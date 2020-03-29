@@ -36,7 +36,7 @@ export class AppointmentService {
       name: name,
       description: description
     };
-    return this.http.post(`${this.uri}/appointments/update/${id}`, appointment);
+    return this.http.post(`${this.uri}/appointments/edit/${id}`, appointment);
   }
 
   deleteAppointment(id) {

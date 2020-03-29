@@ -1,1 +1,11 @@
-<h3 style="margin: 15px 15px">Process payment...</h3>
+<br>
+<h3 style="margin: 15px 15px; text-align: center;">Process payment...</h3>
+<br>
+<div class="progress-loader" [hidden]="!loading">
+    <div>
+    <mat-progress-spinner [mode]="'indeterminate'">
+    </mat-progress-spinner>
+    </div>
+</div>
+<br>
+<br>

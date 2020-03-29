@@ -308,7 +308,7 @@ router.route("/appointments/book/:id").post((req, res) => {
 });
 
 //Paypal payment processing:
-app.get('/psuccess/:payementId/:token/:PayerID', (req, res) => {
+router.route('/psuccess/:payementId/:token/:PayerID').get((req, res) => {
 
     console.log("Process successfull payment");
 

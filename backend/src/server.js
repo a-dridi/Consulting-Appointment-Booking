@@ -27,9 +27,22 @@ require('./passport')(passport);
 if (process.env.NODE_ENV !== 'production') {
 
 }
-//DOMAIN NAME (+ Port number if used) OF THE WEBSITE/WEB SERVER WHERE THIS APPLICATION IS RUNNING - Ex.: https://mydomain.tld
+
+
+//CHANGE THIS --- DOMAIN NAME (+ Port number if used) OF THE WEBSITE/WEB SERVER WHERE THIS APPLICATION IS RUNNING - Ex.: https://mydomain.tld
 const thisDomainName = "http://localhost:4200"
 const thisDomainNameOnly = "http://localhost"
+
+//DATABASE CONNECTION SETTINGS -- EDIT THIS
+mongoose.connect("mongodb://localhost:27017/appointmentsdb");
+//DATABASE CONNECTION SETTINGS -- EDIT THIS - END
+
+//CHANGE THIS END
+
+const DBConnection = mongoose.connection;
+DBConnection.once("open", () => {
+    console.log("Database connection sucessfully established.");
+})
 
 
 //Express Server
@@ -180,14 +193,6 @@ router.route("/admin").get((req, res, next) => {
     return res.status(200).json(req.user);
 })
 
-//DATABASE CONNECTION SETTINGS -- EDIT THIS
-mongoose.connect("mongodb://localhost:27017/appointmentsdb");
-//DATABASE CONNECTION SETTINGS -- EDIT THIS - END
-
-const DBConnection = mongoose.connection;
-DBConnection.once("open", () => {
-    console.log("Database connection sucessfully established.");
-})
 
 /*Database Data - DAO
 *

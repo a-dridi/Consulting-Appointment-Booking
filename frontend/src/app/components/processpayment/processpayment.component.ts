@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AppointmentService } from '../../appointment.service';
 import { Router } from '@angular/router';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 @Component({
   selector: 'app-processpayment',
@@ -9,8 +10,9 @@ import { Router } from '@angular/router';
 })
 export class ProcesspaymentComponent implements OnInit {
 
+  loading: Boolean = true;
 
-  constructor(private appointmentService: AppointmentService, private router: Router) {
+  constructor(private appointmentService: AppointmentService, private router: Router, private spinnerModule: MatProgressSpinnerModule) {
     this.doPayment();
   }
 

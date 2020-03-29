@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { AppointmentService } from '../../appointment.service';
 import { Router, ActivatedRoute } from '@angular/router';
-import { FormGroup, FormBuilder, Validators, FormControl} from '@angular/forms';
-import { MatSnackBar } from '@angular/material/snack-bar'; 
+import { FormGroup, FormBuilder, Validators, FormControl } from '@angular/forms';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { Appointment } from '../../appointment.model';
 
 
@@ -21,7 +21,7 @@ export class EditComponent implements OnInit {
   updateForm: FormGroup;
   selectedTime: string;
 
-  constructor(private appointmentService: AppointmentService, private router: Router, private route: ActivatedRoute, private snackBar: MatSnackBar, private appointmentForm: FormBuilder) { 
+  constructor(private appointmentService: AppointmentService, private router: Router, private route: ActivatedRoute, private snackBar: MatSnackBar, private appointmentForm: FormBuilder) {
     this.buildForm();
   }
 
@@ -32,6 +32,8 @@ export class EditComponent implements OnInit {
         this.appointment = res;
         let dateParsed = new Date(this.appointment.date);
         this.selectedTime = "" + dateParsed.getHours() + ":" + dateParsed.getMinutes();
+        this.selectedHour = "" + dateParsed.getHours();
+        this.selectedMinute = "" + dateParsed.getMinutes();
         this.updateForm.get("date").setValue(this.appointment.date);
         this.updateForm.get("name").setValue(this.appointment.name);
         this.updateForm.get("description").setValue(this.appointment.description);
@@ -40,7 +42,7 @@ export class EditComponent implements OnInit {
     })
   }
 
-  buildForm(){
+  buildForm() {
     this.updateForm = this.appointmentForm.group({
       date: [''],
       name: ['', Validators.required],
@@ -49,25 +51,24 @@ export class EditComponent implements OnInit {
     });
   }
 
-  updateAppointment(date, name, description){
+  updateAppointment(date, name, description) {
 
     //Reformat date into us format - for given French date locale
-    let dateParsed=new Date( date.split("/").reverse().join("/") );
+    let dateParsed = new Date(date.split("/").reverse().join("/"));
     //Set selected time by timepicker
-    if (!isNaN(parseInt(this.selectedHour)) && !isNaN(parseInt(this.selectedHour))) {
     dateParsed.setHours(parseInt(this.selectedHour));
     dateParsed.setMinutes(parseInt(this.selectedMinute));
-    }
-    date=dateParsed.toString();
+
+    date = dateParsed.toString();
 
     this.appointmentService.updateAppointment(this.id, date, name, description).subscribe(() => {
       this.snackBar.open("Appointment was updated successfully!", "OK", {
         duration: 4000
       });
-      })
+    })
   }
 
-  updateTime(time: String){
+  updateTime(time: String) {
     let timeSplitted = time.split(":");
     this.selectedHour = timeSplitted[0];
     this.selectedMinute = timeSplitted[1];

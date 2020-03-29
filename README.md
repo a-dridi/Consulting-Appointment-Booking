@@ -82,10 +82,16 @@ To create a production version.
 
 - Backend:
 ```
+npm install
+```
+```
 npm run build
 ```
 
 - Frontend:
+```
+npm install
+```
 ```
 ng build --prod=true
 ```
