@@ -99,7 +99,7 @@ ng build --prod=true
 ## Run
 To start the application directly. You need to have NodeJS and MongoDB installed.
 
-**Start Database server (In Windows): **
+**Start Database server (In Windows):**
 ```
 bin/mongod.exe
 ```
