@@ -33,10 +33,15 @@ export class CreateComponent implements OnInit {
     //Reformat date into us format - for given French date locale
     if (date != null && date !== "") {
       let dateParsed = new Date(date.split("/").reverse().join("/"));
-      //Set selected time by timepicker
-      if (!isNaN(parseInt(this.selectedHour)) && !isNaN(parseInt(this.selectedHour))) {
-        dateParsed.setHours(parseInt(this.selectedHour));
-        dateParsed.setMinutes(parseInt(this.selectedMinute));
+
+      if (isNaN(dateParsed.getTime())) {
+        date = Date.now;
+      } else {
+        //Set selected time by timepicker
+        if (!isNaN(parseInt(this.selectedHour)) && !isNaN(parseInt(this.selectedHour))) {
+          dateParsed.setHours(parseInt(this.selectedHour));
+          dateParsed.setMinutes(parseInt(this.selectedMinute));
+        }
         date = dateParsed.toString();
       }
     } else {

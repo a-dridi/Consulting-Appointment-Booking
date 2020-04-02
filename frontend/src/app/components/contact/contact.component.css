@@ -1,0 +1,51 @@
+#contact-map{
+    width: 100%;
+    height: 300px;
+}
+
+.contact-details {
+    margin-left: auto;
+    margin-right: auto;
+    display: table;
+}
+
+.contact-row-left {
+    flex-grow: 0.1;
+    color: brown;
+}
+
+.contact-row-right {
+    flex-grow: 9.9;
+}
+
+.contact-address {
+    display: flex;
+    align-items: center;
+}
+
+.contact-email {
+    display: flex;
+    align-items: center;
+}
+
+.contact-telephone {
+    display: flex;
+    align-items: center;
+}
+
+.contact-website {
+    display: flex;
+    align-items: center;
+}
+
+.content-container {
+    margin: 10px 15px;
+}
+
+.makeInline {
+    display: inline;
+}
+
+.makeBlock {
+    display: block;
+}

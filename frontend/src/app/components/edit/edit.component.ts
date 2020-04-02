@@ -55,11 +55,16 @@ export class EditComponent implements OnInit {
 
     //Reformat date into us format - for given French date locale
     let dateParsed = new Date(date.split("/").reverse().join("/"));
-    //Set selected time by timepicker
-    dateParsed.setHours(parseInt(this.selectedHour));
-    dateParsed.setMinutes(parseInt(this.selectedMinute));
 
-    date = dateParsed.toString();
+    if (isNaN(dateParsed.getTime())) {
+      date = Date.now;
+    } else {
+      //Set selected time by timepicker
+      dateParsed.setHours(parseInt(this.selectedHour));
+      dateParsed.setMinutes(parseInt(this.selectedMinute));
+
+      date = dateParsed.toString();
+    }
 
     this.appointmentService.updateAppointment(this.id, date, name, description).subscribe(() => {
       this.snackBar.open("Appointment was updated successfully!", "OK", {

@@ -36,6 +36,9 @@ import { AdminRegistrationComponent } from './components/admin-registration/admi
 import { CheckadminauthenticationComponent } from './components/checkadminauthentication/checkadminauthentication.component';
 import { AdminLogoutComponent } from './components/admin-logout/admin-logout.component';
 import { AdminDataSharingService } from './admindatasharingservice';
+import { GeneralNoticeComponent } from './components/general-notice/general-notice.component';
+import { PrivacyPolicyComponent } from './components/privacy-policy/privacy-policy.component';
+import { ContactComponent } from './components/contact/contact.component';
 
 const appRoutes: Routes = [
 {path: "create", component: CreateComponent},
@@ -49,6 +52,9 @@ const appRoutes: Routes = [
 {path: 'admin-login', component: AdminLoginComponent},
 {path: 'admin-logout', component: AdminLogoutComponent},
 {path: 'admin-registration', component: AdminRegistrationComponent},
+{path: 'general-notice', component: GeneralNoticeComponent},
+{path: 'privacy-policy', component: PrivacyPolicyComponent},
+{path: 'contact', component: ContactComponent},
 
 {path: '', redirectTo: 'allappointments', pathMatch: 'full'}
 ];
@@ -70,7 +76,10 @@ const appRoutes: Routes = [
     AdminLoginComponent,
     AdminLogoutComponent,
     AdminRegistrationComponent,
-    CheckadminauthenticationComponent
+    CheckadminauthenticationComponent,
+    GeneralNoticeComponent,
+    PrivacyPolicyComponent,
+    ContactComponent
   ],
   imports: [
     MatToolbarModule,

@@ -10,6 +10,9 @@ https://fast-woodland-47882.herokuapp.com/
 
 Admin user account: max.mustermann@mydomain.net - Password: 123456
 
+## Video
+https://youtu.be/EWYUoETQnEw 
+
 ## Features
 * Clients can book an appointment without registration
 * Book appointment and pay through Paypal
@@ -119,6 +122,11 @@ cd frontend
 ```
 ng serve --open
 ```
+
+## Screenshots
+![Screenshot2 of application](https://raw.githubusercontent.com/a-dridi/Consulting-Appointment-Booking/master/screenshot2.PNG)
+![Screenshot3 of application](https://raw.githubusercontent.com/a-dridi/Consulting-Appointment-Booking/master/screenshot3.PNG)
+
 
 ## Authors
 

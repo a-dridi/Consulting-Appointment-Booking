@@ -1,8 +1,8 @@
 <mat-toolbar id="headerToolbar">
   <div style="flex-grow: 5;">
-  <span id="titleWebsite"><img src="assets/img/logo.png" width="30px" style="margin-top: 10px" /> <a href="/"
-      style="text-decoration: none; color: brown">The Consulting Company</a></span>
-      </div>
+    <span id="titleWebsite"><img src="assets/img/logo.png" width="30px" style="margin-top: 10px" /> <a href="/"
+        style="text-decoration: none; color: brown">The Consulting Company</a></span>
+  </div>
   <div style="flex-grow: 1;" *ngIf="!adminLoggedIn">
     <span><a [routerLink]="" (click)="showAdminAgentPage()" id=adminsectionLink>Agent (Admin) section </a></span>
   </div>
@@ -24,9 +24,9 @@
   </mat-toolbar-row>
   <mat-toolbar-row>
     <li class="footer-links">
-      <ul><a href="#">General notice</a></ul>
-      <ul><a href="#">Data privacy</a></ul>
-      <ul><a href="#">Contact</a></ul>
+      <ul><a href="/general-notice">General notice</a></ul>
+      <ul><a href="/privacy-policy">Data privacy</a></ul>
+      <ul><a href="/contact">Contact</a></ul>
     </li>
   </mat-toolbar-row>
 </mat-toolbar>
