@@ -1,4 +1,5 @@
 import { Component, AfterViewInit, ViewChild, ElementRef, OnInit } from '@angular/core';
+import { AppComponent } from 'src/app/app.component';
 
 @Component({
   selector: 'app-contact',
@@ -7,6 +8,7 @@ import { Component, AfterViewInit, ViewChild, ElementRef, OnInit } from '@angula
 })
 
 export class ContactComponent implements OnInit {
+  public uiString: Map<String, String>;
 
   @ViewChild('mapContainer', { static: false }) gmap: ElementRef;
 
@@ -18,7 +20,7 @@ export class ContactComponent implements OnInit {
     {
       position: new google.maps.LatLng(48.188101, 16.340590),
       map: this.map,
-      title: "The Counselting Company XX HQ"
+      title: "The Counsulting Company XX HQ"
     }
   ];
 
@@ -50,7 +52,9 @@ export class ContactComponent implements OnInit {
     this.hqMarker.setMap(this.map);
   }
 
-  constructor() { }
+  constructor() { 
+    this.uiString = AppComponent.uiStringFinal;
+  }
 
   ngOnInit(): void {
   }

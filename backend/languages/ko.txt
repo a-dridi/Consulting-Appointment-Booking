@@ -1,0 +1,135 @@
+ko
+appAgentSectionMenutitle==에이전트 / 관리 섹션
+appLogoutButtonMenutitle==로그아웃
+appGeneralnoticeFootertitle==일반 공지사항
+appPrivacypolicyFootertitle==개인 정보 보호 정책
+appContactFootertitle==접촉
+adminSuccessSnackbar==예약한 예약이 성공적으로 삭제됨!
+adminGreeting==안녕_%_
+adminHeaderAppointmentsToday==오늘: 오늘 예약한 예약이 _%_
+adminAllCreatedAppointmentsButton==작성된 모든 약속
+adminCreatenewappointmentsButton==새 약속 만들기
+adminSettingsButton==설정
+adminTodayBookedAppointmentsHeader==오늘: 고객별 예약
+adminDateBookedAppointmentsTableHeader==데이트
+adminClientnameBookedAppointmentsTableHeader==클라이언트 이름
+adminClientemailBookedAppointmentsTableHeader==클라이언트 이메일
+adminClientTelephoneBookedAppointmentsTableHeader==클라이언트 전화
+adminAppointmentNameBookedAppointmentsTableHeader==약속 이름
+adminDescriptionBookedAppointmentsTableHeader==설명
+adminRateBookedAppointmentsTableHeader==비율
+adminDeleteBookedAppointmentsTableHeader==삭제
+adminDeleteBookedAppointmentsTableButton==삭제
+adminNoBookedAppointmentsTablePlaceholder==오늘 예약한 예약이 0개임
+adminAllBookedAppointmentsHeader==모두: 클라이언트별 예약
+adminDateAllBookedAppointmentsTableHeader==데이트
+adminClientnameAllBookedAppointmentsTableHeader==클라이언트 이름
+adminClientemailAllBookedAppointmentsTableHeader==클라이언트 이메일
+adminClienttelephoneAllBookedAppointmentsTableHeader==클라이언트 전화
+adminAppointmentnameAllBookedAppointmentsTableHeader==약속 이름
+adminDescriptionAllBookedAppointmentsTableHeader==설명
+adminRateAllBookedAppointmentsTableHeader==비율
+adminDeleteAllBookedAppointmentsTableHeader==삭제
+adminDeleteAllBookedAppointmentsTableButton==삭제
+adminNoAllBookedAppointmentsTablePlaceholder==당신의 고객들에 의한 예약된 약속이 없다.
+adminCurrencySettingHeader==통화 선택:
+adminCurrencySettingButton==OK
+adminloginWrongPasswordSnackbar==관리자 계정의 올바른 전자 메일 주소와 암호를 입력하십시오!
+adminloginLoginFailedSnackbar==로그인 실패. 관리자 계정의 올바른 전자 메일 주소와 암호를 입력하십시오.
+adminloginSiteHeader==관리자 로그인
+adminloginFormEmail==이메일:
+adminloginFormEmailPlaceholder==이메일 입력
+adminloginFormPassword==암호:
+adminloginFormPasswordPlaceholder==암호 입력
+adminloginFormLoginButton==로그 인.
+adminloginNoAdminAccountCreatedText==운영 용도로 이 애플리케이션을 사용하기 전에 관리자 계정을 등록하십시오.
+adminloginRegisterLink==등록하다
+adminregisterSiteheader==관리자 계정 등록
+adminregisterEmptyFieldSnackbar==모든 필수 필드를 올바르게 입력하십시오!
+adminregisterPasswordNotSameSnackbar==암호와 암호 확인은 동일해야 한다!
+adminregisterPasswordTooShortSnackbar==암호는 최소 6자 이상이어야 한다!
+adminregisterRegistrationSuccessSnackbar==좋아. 등록이 끝났다. 지금 계정 자격 증명으로 로그인하십시오.
+adminregisterRegistrationFailedSnackbar==등록 실패! 모든 필수 필드를 올바르게 입력하십시오.
+adminregisterSitesubheader==에이전트/admin 대시보드를 보는 데 사용할 수 있는 관리자 계정은 하나만 등록할 수 있다.
+adminregisterAdminAccountCreated==admin 계정은 이미 등록되어 있다. 관리자 계정 자격 증명을 사용하여 로그인하십시오.
+adminregisterFormName==이름
+adminregisterFormNamePlaceholder==이름 입력
+adminregisterFormEmail==이메일
+adminregisterFormEmailPlaceholder==이메일 입력
+adminregisterFormPassword==암호:
+adminregisterFormPasswordPlaceholder==암호 입력
+adminregisterFormPasswordconfirmation==암호 확인:
+adminregisterFormPasswordconfirmationPlaceholder==암호를 다시 입력하십시오.
+adminregisterFormTelephone==전화(옵션):
+adminregisterFormTelephonePlaceholder==전화 번호 입력
+adminregisterFormNote==참고(옵션):
+adminregisterFormNotePlaceholder==옵션 노트
+adminregisterFormRegisterButton==등록하다
+adminregisterLoginInfo==관리자 계정이 있으십니까?
+adminregisterLoginLink==로그 인.
+bookSiteHeader==예약
+bookSiteSubheader==아래 버튼을 클릭하여 결제를 하고 다음 약속을 예약하십시오.
+bookTableTimedateHeader==시간 - 날짜:
+bookTableNameHeader==이름:
+bookTableDescriptionHeader==설명:
+bookTableRateHeader==요금:
+bookBookButtonAlt==페이팔로 체크아웃
+bookBookButtonText==책
+contactSiteHeader==접촉
+contactSiteSubHeader==연락처 세부 정보
+createSiteHeader==새 약속 추가
+createRateErrorSnackbar==오류: 비율이 1 이상(>=1)이어야 함
+createSuccessSnackbar==새로운 약속이 추가됨
+createFormTImeoftheappointmentColumnPlaceholder==시간
+createFormDateoftheappointmentColumnHeader==약속 날짜
+createFormDateoftheappointmentColumnPlaceholder==약속 날짜
+createFormNameColumnHeader==약속의 제목
+createFormNameColumnPlaceholder==임명직
+createFormDescriptionColumnHeader==약속 설명
+createFormDescriptionColumnPlaceholder==약속 설명
+createFormRateColumnPlaceholder==요금(가격) - 기본값: 1 _%_
+createFormSaveButton==예약 저장
+createFormBackButton==뒤
+editSiteHeader==약속 편집
+editSuccessSnackbar==예약이 성공적으로 업데이트됨!
+editFormTimeoftheappointmentColumnPlaceholder==시간
+editFormDateoftheappointmentColumnHeader==약속 날짜
+editFormDateoftheappointmentColumnPlaceholder==약속 날짜
+editFormNameColumnHeader==약속의 제목
+editFormDescriptionColumnHeader==약속 설명
+editFormRateColumnHeader==요금(가격) - 기본값: 1 _%_
+editFormSaveButton==예약 저장
+editFormBackButton==뒤
+generalnoticeSiteHeader==일반 공지사항
+listAddnewappointmentButton==새 약속 추가
+listDeleteAppointmentSuccess==약속이 성공적으로 삭제됨!
+listAdmindashboardButton==관리 대시보드
+listTableDateHeader==데이트
+listTableAppointmentNameHeader==약속 이름
+listTableDescriptionHeader==설명
+listTableRateHeader==비율
+listTableBooknowHeader==지금 예약
+listTableBooknowButton==책
+listTableEditdeleteHeader==편집/삭제
+listTableEditButton==편집
+listTableDeleteButton==삭제
+listNoAppointments==지금은 가능한 약속이 없다. 나중에 다시 오십시오.
+paymentcancelSiteHeader==결제가 취소됨
+paymentcancelSiteSubtext==너의 약속은 예약되지 않았다.
+paymentsucessSiteHeader==결제가 성공
+paymentsucessSiteSubtext==예약(id: _%_)이(가) 성공적으로 예약됨.
+paymentsucessDatetimeHeader==시간 - 날짜:
+paymentsucessNameHeader==이름:
+paymentsucessDescriptionHeader==설명:
+paymentsucessRateHeader==요금:
+paymentsucessBackButton==뒤
+paymentsucessPrintButton==프린트
+privacypolicySiteHeader==개인 정보 보호 정책
+processpaymentSiteHeader==프로세스 결제...
+settingsSiteHeader==설정
+settingsCurrencyDescription==통화
+settingsCurrencyInfo==정보: 이미 존재하는 약속에 대해서는 통화를 변경할 수 없다.
+settingsButtonSave==저장하다
+settingsButtonBack==뒤
+settingsSuccessSnackbar==OK. 설정이 성공적으로 저장됨
+settingsFailedSnackbar==오류. 설정을 저장할 수 없음.

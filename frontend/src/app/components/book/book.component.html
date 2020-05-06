@@ -2,31 +2,31 @@
     <br>
     <mat-card class="container-appointment-main">
         <section class="mat-typograhy">
-            <h3>Book this appointment</h3>
+            <h3>{{uiString.get("bookSiteHeader")}}</h3>
         </section>
         <mat-divider></mat-divider>
         <br>
-        <p style="font-weight: bold">Click on the button below to pay and book the following appointment: </p>
+        <p style="font-weight: bold">{{uiString.get("bookSiteSubheader")}} </p>
         <br>
 
         <div class="field-full-width">
-            <mat-label>Time - Date: </mat-label>
+            <mat-label>{{uiString.get("bookTableTimedateHeader")}} </mat-label>
             <h4>{{selectedDate | date: "HH:mm - dd.MM.yyyy"}}</h4>
         </div>
 
         <div class="field-full-width">
-            <mat-label>Name: </mat-label>
+            <mat-label>{{uiString.get("bookTableNameHeader")}} </mat-label>
             <h4>{{selectedName}}</h4>
         </div>
 
         <div class="field-full-width">
-            <mat-label>Description: </mat-label>
+            <mat-label>{{uiString.get("bookTableDescriptionHeader")}} </mat-label>
             <h4>{{selectedDescription}}</h4>
         </div>
 
         <div class="field-full-width">
-            <mat-label>Rate in USD $: </mat-label>
-            <h4>{{selectedRate}}</h4>
+            <mat-label>{{uiString.get("bookTableRateHeader")}} </mat-label>
+            <h4>{{selectedRate}} {{selectedCurrency}}</h4>
         </div>
 
         <mat-divider>
@@ -38,6 +38,6 @@
             </mat-progress-spinner>
         </div>
         <button *ngIf="!this.loading" (click)="bookAndPayAppointment()" mat-raised-button color="primary"
-                class="button-submit-appointment"><img src="https://www.paypalobjects.com/webstatic/en_US/i/buttons/checkout-logo-medium.png" alt="Check out with PayPal" style="margin-right: 10px; height: 25px"/> Book</button>
+                class="button-submit-appointment"><img src="https://www.paypalobjects.com/webstatic/en_US/i/buttons/checkout-logo-medium.png" alt="{{bookButtonAlt}}" style="margin-right: 10px; height: 25px"/> {{uiString.get("bookBookButtonText")}}</button>
     </mat-card>
 </div>

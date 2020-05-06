@@ -4,14 +4,18 @@ import bodyParser from "body-parser";
 import mongoose from "mongoose";
 
 //Models DB
-import AdminAccount from "./models/AdminAccount";
 import AvailableAppointment from "./models/AvailableAppointment";
 import BookedAppointment from "./models/BookedAppointment";
-
 import Client from "./models/Client";
+import Languages from "./models/Languages";
+import AdminAccount from "./models/AdminAccount";
+import AppSettings from './models/AppSettings'
+
 const session = require('express-session');
 const bcrypt = require('bcryptjs');
 const passport = require("passport");
+const fs = require('fs');
+const path = require('path')
 
 //Paypal payment
 const paypal = require('paypal-rest-sdk');
@@ -48,7 +52,7 @@ app.use(cors({
             return callback(null, true);
         }
 
-		
+
         if (allowedOrigins.indexOf(origin) === -1) {
             var msg = 'The CORS policy for this site does not ' +
                 'allow access from the specified Origin.';
@@ -60,10 +64,193 @@ app.use(cors({
 }));
 
 
-
 //App
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
+importLanguagesUiText();
+createAppSettings()
+
+/**
+ * Import language ui text from all language text files in the folder languages (in backend). Is run at startup automatically
+ */
+function importLanguagesUiText() {
+    Languages.remove({})
+        .then(language => {
+            const languagesDirectory = path.join(__dirname, 'languages');
+            fs.readdir(languagesDirectory, (err, languagesFiles) => {
+                if (err) {
+                    console.log("Unable to open languages directory: " + err);
+                }
+
+                languagesFiles.forEach(file => {
+                    readAndImportLanguageTextFile("languages/" + file);
+                })
+            });
+        })
+        .catch(err => console.log(err));
+
+}
+
+/**
+ * Imports one language file. Called in importLanguagesUiText() for all language files in the "languages" directory
+ * @param {} file The languagefile
+ * languageIsoCode is the language iso code of the file e.g. en for english language file. Added always in the first line.
+ */
+function readAndImportLanguageTextFile(file) {
+    const languageFileStream = fs.createReadStream(file, { encoding: "utf-8" });
+    languageFileStream.on('data', data => {
+        let languageFileLines = data.split(/\n/);
+        let languageIsoCode = languageFileLines[0];
+        languageIsoCode = languageIsoCode.replace('\n', '');
+        languageIsoCode = languageIsoCode.replace('\r', '');
+
+
+        for (let line in languageFileLines) {
+            //Import file line (code and translation text) into the database
+            let codeTranslationPair = languageFileLines[line].split("==");
+            //console.log("pair 1: " + codeTranslationPair[0] + " - pair 2: " + codeTranslationPair[1]);
+            if (codeTranslationPair.length == 2) {
+                const languageEntry = {
+                    code: codeTranslationPair[0],
+                    translation: codeTranslationPair[1],
+                    language: languageIsoCode
+                };
+
+                let language = new Languages(languageEntry);
+                //language.rem
+                language.save()
+                    .then(language => {
+                        //res.status(200);
+                    })
+                    .catch(err => {
+                        console.log("Language file cannot be read: " + err);
+                        // res.status(400).send(err);
+                    });
+
+            }
+        }
+
+    });
+
+
+}
+
+/**
+ * Create AppSettings if there were not added to the database
+ */
+function createAppSettings() {
+    let settingsEntry = {
+        code: "defaultCurrency",
+        value: "$ (USD)"
+    };
+
+    let appsetting = new AppSettings(settingsEntry);
+
+    appsetting.save()
+        .then(appsetting => {
+            //res.status(200);
+        })
+        .catch(err => {
+            //Setting was already saved in the database. OK
+            //console.log("Language file cannot be read: " + err);
+            // res.status(400).send(err);
+        });
+
+    settingsEntry = {
+        code: "emailHost",
+        value: ""
+    };
+    appsetting = new AppSettings(settingsEntry);
+    appsetting.save()
+        .then(appsetting => {
+            //res.status(200);
+        })
+        .catch(err => {
+            //Setting was already saved in the database. OK
+        });
+
+    settingsEntry = {
+        code: "emailUsername",
+        value: ""
+    };
+    appsetting = new AppSettings(settingsEntry);
+    appsetting.save()
+        .then(appsetting => {
+            //res.status(200);
+        })
+        .catch(err => {
+            //Setting was already saved in the database. OK
+        });
+
+    settingsEntry = {
+        code: "emailPassword",
+        value: ""
+    };
+    appsetting = new AppSettings(settingsEntry);
+    appsetting.save()
+        .then(appsetting => {
+            //res.status(200);
+        })
+        .catch(err => {
+            //Setting was already saved in the database. OK
+        });
+
+    settingsEntry = {
+        code: "emailAccountName",
+        value: ""
+    };
+    appsetting = new AppSettings(settingsEntry);
+    appsetting.save()
+        .then(appsetting => {
+            //res.status(200);
+        })
+        .catch(err => {
+            //Setting was already saved in the database. OK
+        });
+
+}
+
+/**
+ * Load all ui text of a translation from a file in the folder "languages"
+ */
+router.route("/language/:languagecode").get((req, res) => {
+    let loadLanguageCode = req.params.languagecode;
+    //Debug
+    //console.log("load language: " + loadLanguageCode);
+
+    Languages.find({ language: loadLanguageCode }, 'code translation')
+        .then(translationtexts => {
+            //Debug: 
+            //console.log("language loaded:");
+            //console.log(translationtexts);
+            if (translationtexts.length == 0) {
+                // reloadUiTextFromDb(loadLanguageCode + "\r", res);
+                loadDefaultTextFromDb(res);
+            } else {
+                res.json(translationtexts);
+            }
+        })
+        .catch(err => console.log(err));
+});
+
+
+/**
+ * Load English language translation
+ */
+function loadDefaultTextFromDb(res) {
+    Languages.find({ language: 'en' }, 'code translation')
+        .then(translationtexts => {
+            console.log("language loaded:");
+            if (translationtexts.length == 0) {
+                console.log("PLEASE ADD AT LEAST THE ENGLISH LANGUAGE FILE.")
+            } else {
+                //  console.log(translationtexts);
+                res.json(translationtexts);
+            }
+        })
+        .catch(err => console.log(err));
+}
+
 
 // Session and authentication managment - Passport JS
 const MongoStore = require('connect-mongo')(session);
@@ -168,7 +355,7 @@ router.route('/logout').get((req, res, next) => {
     if (isAdminUserAuthenticated(req, res, next)) {
         req.logout();
         res.json("Logout was successful.");
-      //res.redirect('allappointments');
+        //res.redirect('allappointments');
     }
 })
 
@@ -228,7 +415,7 @@ router.route("/appointments/add").post((req, res) => {
 router.route("/appointments/edit/:id").post((req, res) => {
     AvailableAppointment.findById(req.params.id, (err, appointment) => {
         if (!appointment) {
-            return next(new Error("Could not load appointment from database"));
+            res.status(400).send("Could not load appointment from database");
         } else {
             appointment.date = req.body.date;
             appointment.name = req.body.name;
@@ -239,7 +426,7 @@ router.route("/appointments/edit/:id").post((req, res) => {
                     res.json("Appointment was successfully updated.")
                 })
                 .catch(err => {
-                    res.status(400).update("Update failed. ");
+                    res.status(400).send("Update failed. ");
                 });
 
         }
@@ -274,12 +461,12 @@ router.route("/appointments/book/:id").post((req, res) => {
                     "name": req.body.name,
                     "sku": "" + req.params.id,
                     "price": req.body.rate,
-                    "currency": "USD",
+                    "currency": getCurrencyIsoCode(req.body.currency),
                     "quantity": 1
                 }]
             },
             "amount": {
-                "currency": "USD",
+                "currency": getCurrencyIsoCode(req.body.currency),
                 "total": req.body.rate
             },
             "description": req.body.description
@@ -289,7 +476,8 @@ router.route("/appointments/book/:id").post((req, res) => {
 
     paypal.payment.create(create_payment_json, function (error, payment) {
         if (error) {
-            throw error;
+            console.log("ERROR - Payment Process FAILED: " + JSON.stringify(error))
+            res.status(400).json(error);
         } else {
             console.log("Create Payment Response");
             console.log(payment);
@@ -306,6 +494,24 @@ router.route("/appointments/book/:id").post((req, res) => {
     });
 
 });
+
+/**
+ * Return ISO Code for currencies with custom name
+ * @param {} currencyName 
+ */
+function getCurrencyIsoCode(currencyName) {
+    switch (currencyName) {
+        case "$ (USD)": return "USD";
+            break;
+        case "€ (EUR)": return "EUR";
+            break;
+        case "£ (GBP)": return "GBP";
+            break;
+        case "¥ (JPY)": return "JPY";
+            break;
+        default: return currencyName;
+    }
+}
 
 //Paypal payment processing:
 router.route('/psuccess/:payementId/:token/:PayerID').get((req, res) => {
@@ -357,7 +563,6 @@ router.route('/psuccess/:payementId/:token/:PayerID').get((req, res) => {
  */
 function createClientAndBookAppointment(forename, surname, email, telephone, appointmentId, res) {
 
-
     //Search if client exist. If client exist return client.
     Client.findOne({ 'email': email }, 'email', function (err, client) {
         console.log("Find email: " + email);
@@ -400,13 +605,25 @@ function bookAppointment(clientId, appointmentId, res) {
         if (err) {
             throw err;
         } else {
-            const newBookedAppointment = {
-                "date": appointment.date,
-                "name": appointment.name,
-                "description": appointment.description,
-                "rate": appointment.rate,
-                "clientId": clientId
-            };
+            let newBookedAppointment;
+            if (appointment.currency != undefined) {
+                newBookedAppointment = {
+                    "date": appointment.date,
+                    "name": appointment.name,
+                    "description": appointment.description,
+                    "rate": appointment.rate,
+                    "currency": appointment.currency,
+                    "clientId": clientId
+                };
+            } else {
+                newBookedAppointment = {
+                    "date": appointment.date,
+                    "name": appointment.name,
+                    "description": appointment.description,
+                    "rate": appointment.rate,
+                    "clientId": clientId
+                };
+            }
 
             let booked = new BookedAppointment(newBookedAppointment);
             console.log("Do booking appointment ---- ");
@@ -479,7 +696,7 @@ router.route("/client/:id").get((req, res) => {
 router.route("/client/updatephone/:id").post((req, res) => {
     Client.findById(req.params.id, (err, client) => {
         if (!client) {
-            return next(new Error("Could not load client from database"));
+            res.status(400).update("Could not load client from database");
         } else {
             client.telephone = req.body.telephone;
 
@@ -488,7 +705,7 @@ router.route("/client/updatephone/:id").post((req, res) => {
                     res.json("Client telephone number was successfully updated.")
                 })
                 .catch(err => {
-                    res.status(400).update("Update failed. ");
+                    res.status(400).send("Update failed. ");
                 });
 
         }
@@ -578,6 +795,85 @@ router.route("/bookedappointmentsclientstoday").get((req, res) => {
         res.json(res2);
     });
 });
+
+//getAllClients:
+router.route("/clients").get((req, res) => {
+    Client.find((err, client) => {
+        if (err) {
+            console.log("DB error - getAllClients: " + err);
+        } else {
+            res.json(client);
+        }
+    })
+});
+
+//getAllAdminAccounts:
+router.route("/adminaccounts").get((req, res) => {
+    AdminAccount.find((err, adminaccount) => {
+        if (err) {
+            console.log("DB error - getAllAdminAccounts: " + err);
+        } else {
+            res.json(adminaccount);
+        }
+    })
+});
+
+//getAllAppSettings:
+router.route("/appsettings").get((req, res) => {
+    AppSettings.find((err, appsettings) => {
+        if (err) {
+            console.log("DB error - getAllAppSettings: " + err);
+        } else {
+            res.json(appsettings);
+        }
+    })
+});
+
+//addAppSetting
+router.route("/appsetting/add").post((req, res) => {
+    let appsettings = new AppSettings(req.body);
+    appsettings.save()
+        .then(appsetting => {
+            res.status(200).json({ "appsetting": "New appsetting was added successfully" })
+        })
+        .catch(err => {
+            res.status(400).send("Failed to add new record into the database");
+        });
+});
+
+//editAppSetting - Update existing AppSettings
+router.route("/appsetting/edit/:id").post((req, res) => {
+
+    AppSettings.updateOne(
+        { code: req.body.code },
+        { $set: { value: req.body.value } }, (err, appsettingReturn) => {
+            if (err) {
+                res.status(400).send("Update failed. " + err);
+            } else {
+                res.json("AppSetting was successfully updated.")
+            }
+        }
+    )
+
+})
+
+
+//deleteOneAppSetting - Delete an existing AppSetting
+router.route("/appsetting/delete/:code").get((req, res) => {
+    AppSettings.findOneAndRemove({ code: req.params.code }, (err, appsetting) => {
+        if (err) {
+            res.json(err);
+        } else {
+            res.json("AppSetting was removed successfully. ")
+        }
+    });
+});
+
+//deleteAllAppSettings - Delete all AppSettings
+router.route("/appsettings/deleteall").get((req, res) => {
+    AppSettings.remove({}).then(res.status(200)).catch(err => console.log(err));
+});
+
 
 //Routing - to ExpressJS Server
 app.use("/", router)

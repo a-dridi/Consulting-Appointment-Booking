@@ -4,4 +4,5 @@ export interface Appointment {
     name: String;
     description: String;
     rate: Number;
+    currency: String;
 }

@@ -1,0 +1,134 @@
+Agent / Admin Section
+Logout
+General Notice
+Privacy Policy
+Contact
+Booked Appointment was deleted successfully!
+Hello _%_
+Today: You have _%_ booked appointments for today
+All created appointments
+Create new appointments
+Settings
+Today: Booked appointments by clients
+Date
+Client Name
+Client Email
+Client Telephone
+Appointment Name
+Description
+Rate
+Delete
+Delete
+You have 0 booked appointments for today
+All: Booked appointments by clients
+Date
+Client Name
+Client Email
+Client Telephone
+Appointment Name
+Description
+Rate
+Delete
+Delete
+There are no booked appointments by your clients. 
+Select currency:
+OK
+Please enter your correct email address and password of your admin account!
+LOGIN FAILED. Please enter your correct email address and password of your admin account.
+Admin Login
+Email:
+Enter Email
+Password:
+Enter Password
+Login
+YOU HAVE TO REGISTER AN ADMIN ACCOUNT BEFORE YOU USE THIS APPLICATION FOR PRODUCTION USE:
+Register
+Register Admin Account
+Please enter all required fields correctly!
+Password and Password confirmation must be the same!
+Password must be at least 6 characters long!
+OK. Registration is done. Please login with your account credentials now.
+Registration failed! Please enter all required fields correctly.
+You can register only one admin account, that can be used to view your agent/admin dashboard.
+Admin account is already registered. Please use your admin account credentials to login.
+Name
+Enter Name
+Email
+Enter Email
+Password:
+Enter Password
+Confirm Password:
+Enter Password again
+Telephone (optional):
+Enter Telephone number
+Note (optional):
+Optional note
+Register
+You Have An Admin Account?
+Login
+Book this appointment
+Click on the button below to pay and book the following appointment:
+Time - Date:
+Name:
+Description:
+Rate:
+Check out with PayPal
+Book
+Contact
+Contact details
+Add new appointment
+ERROR: Your rate must have a value of at least 1 (>=1)
+New appointment was added
+Time
+Date of the appointment
+Date of the appointment
+Title of the appointment
+Appointment title
+Description of the appointment
+Appointment description
+Rate (Price) - Default: 1 _%_
+Save appointment
+Back
+Edit appointment
+Appointment was updated successfully!
+Time
+Date of the appointment
+Date of the appointment
+Title of the appointment
+Description of the appointment
+Rate (Price) - Default: 1 _%_
+Save appointment
+Back
+General Notice
+Add new appointment
+Appointment was deleted successfully!
+Admin Dashboard
+Date
+Appointment Name
+Description
+Rate
+Book now
+Book
+Edit/Delete
+Edit
+Delete
+There are no available appointments at the moment. Please come back later.
+Payment was cancelled
+Your appointment was not booked.
+Payment was successful
+Your appointment (id: _%_) was successfully booked.
+Time - Date:
+Name:
+Description:
+Rate:
+Back
+Print
+Privacy Policy
+Process payment...
+Settings
+Currency
+Information: Currency cannot be changed for already existing appointments.  
+Save
+Back
+OK. Settings were saved successfully
+Error. Settings could not be saved. 

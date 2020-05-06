@@ -20,12 +20,13 @@ export class AppointmentService {
     return this.http.get(`${this.uri}/appointments/${id}`);
   }
 
-  addAppointment(date, name, description, rate) {
+  addAppointment(date, name, description, rate, currency) {
     const appointment = {
       date: date,
       name: name,
       description: description,
-      rate: rate
+      rate: rate,
+      currency: currency
     };
     return this.http.post(`${this.uri}/appointments/add`, appointment);
   }
@@ -43,12 +44,13 @@ export class AppointmentService {
     return this.http.get(`${this.uri}/appointments/delete/${id}`);
   }
 
-  bookAppointment(id, date, name, description, rate, clientId) {
+  bookAppointment(id, date, name, description, rate, currency, clientId) {
     const appointment = {
       date: date,
       name: name,
       description: description,
       rate: rate,
+      currency: currency,
       clientId: clientId
     }
     return this.http.post(`${this.uri}/appointments/book/${id}`, appointment);
@@ -125,4 +127,41 @@ export class AppointmentService {
   getBookedAppointmentsClientsToday(){
     return this.http.get(`${this.uri}/bookedappointmentsclientstoday`);
   } 
+
+  getUiTextTranslationforLanguage(languagecode){
+    return this.http.get(`${this.uri}/language/${languagecode}`);
+
+  }
+  getAdminAccount() {
+    return this.http.get(`${this.uri}/adminaccounts`);
+  }
+
+  getAllAppSettings() {
+    return this.http.get(`${this.uri}/appsettings`);
+  }
+
+  addAppSettings(code, value) {
+    const appsetting = {
+      code: code,
+      value: value
+   };
+    return this.http.post(`${this.uri}/appsetting/add`, appsetting);
+  }
+
+  editAppSetting(code, value) {
+    const appsetting = {
+      code: code,
+      value: value
+   };
+    return this.http.post(`${this.uri}/appsetting/edit/${code}`, appsetting);
+  }
+
+  deleteAppSetting(id) {
+    return this.http.get(`${this.uri}/appsetting/delete/${id}`);
+  }
+
+  deleteAllAppSettings() {
+    return this.http.get(`${this.uri}/appsettings/deleteall`);
+  }
+
 }

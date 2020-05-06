@@ -1,0 +1,135 @@
+es
+appAgentSectionMenutitle==Agente / Sección de Administración
+appLogoutButtonMenutitle==Cierre de sesión
+appGeneralnoticeFootertitle==Aviso general
+appPrivacypolicyFootertitle==Política de privacidad
+appContactFootertitle==Contacte con
+adminSuccessSnackbar==La cita reservada fue borrada con éxito!
+adminGreeting==Hola.
+adminHeaderAppointmentsToday==Hoy: Usted tiene _%_ citas reservadas para hoy
+adminAllCreatedAppointmentsButton==Todos los nombramientos creados
+adminCreatenewappointmentsButton==Crear nuevas citas
+adminSettingsButton==Ajustes
+adminTodayBookedAppointmentsHeader==Hoy: Citas reservadas por los clientes
+adminDateBookedAppointmentsTableHeader==Fecha
+adminClientnameBookedAppointmentsTableHeader==Nombre del cliente
+adminClientemailBookedAppointmentsTableHeader==Correo electrónico del cliente
+adminClientTelephoneBookedAppointmentsTableHeader==Teléfono del cliente
+adminAppointmentNameBookedAppointmentsTableHeader==Nombre de la cita
+adminDescriptionBookedAppointmentsTableHeader==Descripción
+adminRateBookedAppointmentsTableHeader==Valore
+adminDeleteBookedAppointmentsTableHeader==Eliminar
+adminDeleteBookedAppointmentsTableButton==Eliminar
+adminNoBookedAppointmentsTablePlaceholder==Tienes 0 citas reservadas para hoy.
+adminAllBookedAppointmentsHeader==Todos: Citas reservadas por los clientes
+adminDateAllBookedAppointmentsTableHeader==Fecha
+adminClientnameAllBookedAppointmentsTableHeader==Nombre del cliente
+adminClientemailAllBookedAppointmentsTableHeader==Correo electrónico del cliente
+adminClienttelephoneAllBookedAppointmentsTableHeader==Teléfono del cliente
+adminAppointmentnameAllBookedAppointmentsTableHeader==Nombre de la cita
+adminDescriptionAllBookedAppointmentsTableHeader==Descripción
+adminRateAllBookedAppointmentsTableHeader==Valore
+adminDeleteAllBookedAppointmentsTableHeader==Eliminar
+adminDeleteAllBookedAppointmentsTableButton==Eliminar
+adminNoAllBookedAppointmentsTablePlaceholder==No hay citas reservadas por sus clientes. 
+adminCurrencySettingHeader==Seleccione la moneda:
+adminCurrencySettingButton==OK
+adminloginWrongPasswordSnackbar==Por favor, introduzca su dirección de correo electrónico correcta y la contraseña de su cuenta de administrador!
+adminloginLoginFailedSnackbar==LOGIN FALLADO. Por favor, introduzca su dirección de correo electrónico correcta y la contraseña de su cuenta de administrador.
+adminloginSiteHeader==Inicio de sesión de administración
+adminloginFormEmail==Correo electrónico:
+adminloginFormEmailPlaceholder==Introduzca el correo electrónico
+adminloginFormPassword==Contraseña:
+adminloginFormPasswordPlaceholder==Introduzca la contraseña
+adminloginFormLoginButton==Ingresa en
+adminloginNoAdminAccountCreatedText==TIENES QUE REGISTRAR UNA CUENTA DE ADMINISTRADOR ANTES DE USAR ESTA APLICACIÓN PARA USO DE PRODUCCIÓN:
+adminloginRegisterLink==Registra
+adminregisterSiteheader==Registrar la cuenta de administración
+adminregisterEmptyFieldSnackbar==Por favor, introduzca todos los campos obligatorios correctamente!
+adminregisterPasswordNotSameSnackbar==La contraseña y la confirmación de la contraseña deben ser las mismas!
+adminregisterPasswordTooShortSnackbar==¡La contraseña debe tener al menos 6 caracteres!
+adminregisterRegistrationSuccessSnackbar==OK. El registro está hecho. Por favor, inicie sesión con las credenciales de su cuenta ahora.
+adminregisterRegistrationFailedSnackbar==¡El registro falló! Por favor, introduzca todos los campos requeridos correctamente.
+adminregisterSitesubheader==Sólo puede registrar una cuenta de administrador, que puede ser usada para ver su panel de control de agente/administrador.
+adminregisterAdminAccountCreated==La cuenta de administrador ya está registrada. Por favor, utilice las credenciales de su cuenta de administrador para iniciar sesión.
+adminregisterFormName==Nombre
+adminregisterFormNamePlaceholder==Introduzca el nombre
+adminregisterFormEmail==Correo electrónico
+adminregisterFormEmailPlaceholder==Ingresa el correo electrónico
+adminregisterFormPassword==Contraseña:
+adminregisterFormPasswordPlaceholder==Introduzca la contraseña
+adminregisterFormPasswordconfirmation==Confirma la contraseña:
+adminregisterFormPasswordconfirmationPlaceholder==Introduzca la contraseña de nuevo
+adminregisterFormTelephone==Teléfono (opcional):
+adminregisterFormTelephonePlaceholder==Introduzca el número de teléfono
+adminregisterFormNote==Nota (opcional):
+adminregisterFormNotePlaceholder==Nota opcional
+adminregisterFormRegisterButton==Registrarse
+adminregisterLoginInfo==¿Tiene una cuenta de administrador?
+adminregisterLoginLink==Ingresa en
+bookSiteHeader==Reserva esta cita
+bookSiteSubheader==Haga clic en el botón de abajo para pagar y reservar la siguiente cita:
+bookTableTimedateHeader==Hora - Fecha:
+bookTableNameHeader==Nombre:
+bookTableDescriptionHeader==Descripción:
+bookTableRateHeader==Tarifa:
+bookBookButtonAlt==Pagar con PayPal
+bookBookButtonText==Libro
+contactSiteHeader==Contacte con
+contactSiteSubHeader==Datos de contacto
+createSiteHeader==Agregar nueva cita
+createRateErrorSnackbar==ERROR: Su tasa debe tener un valor de al menos 1 (>=1)
+createSuccessSnackbar==Se añadió un nuevo nombramiento
+createFormTImeoftheappointmentColumnPlaceholder==Tiempo
+createFormDateoftheappointmentColumnHeader==Fecha del nombramiento
+createFormDateoftheappointmentColumnPlaceholder==Fecha del nombramiento
+createFormNameColumnHeader==Título del nombramiento
+createFormNameColumnPlaceholder==Título del nombramiento
+createFormDescriptionColumnHeader==Descripción de la cita
+createFormDescriptionColumnPlaceholder==Descripción del nombramiento
+createFormRateColumnPlaceholder==Tasa (Precio) - Predeterminado: 1 _%_
+createFormSaveButton==Guardar cita
+createFormBackButton==Volver
+editSiteHeader==Editar la cita
+editSuccessSnackbar==¡La cita fue actualizada con éxito!
+editFormTimeoftheappointmentColumnPlaceholder==Hora
+editFormDateoftheappointmentColumnHeader==Fecha del nombramiento
+editFormDateoftheappointmentColumnPlaceholder==Fecha del nombramiento
+editFormNameColumnHeader==Título del nombramiento
+editFormDescriptionColumnHeader==Descripción de la cita
+editFormRateColumnHeader==Tasa (Precio) - Predeterminado: 1 _%_
+editFormSaveButton==Guardar cita
+editFormBackButton==Volver
+generalnoticeSiteHeader==Aviso general
+listAddnewappointmentButton==Agregar nueva cita
+listDeleteAppointmentSuccess==¡La cita fue borrada con éxito!
+listAdmindashboardButton==Tablero de administración
+listTableDateHeader==Fecha
+listTableAppointmentNameHeader==Nombre de la cita
+listTableDescriptionHeader==Descripción
+listTableRateHeader==Valore
+listTableBooknowHeader==Reserva ahora
+listTableBooknowButton==Libro
+listTableEditdeleteHeader==Editar/Borrar
+listTableEditButton==Edita
+listTableDeleteButton==Eliminar
+listNoAppointments==No hay citas disponibles en este momento. Por favor, vuelva más tarde.
+paymentcancelSiteHeader==El pago fue cancelado
+paymentcancelSiteSubtext==Su cita no estaba reservada.
+paymentsucessSiteHeader==El pago fue exitoso
+paymentsucessSiteSubtext==Su cita (id: _%_) fue reservada con éxito.
+paymentsucessDatetimeHeader==Hora - Fecha:
+paymentsucessNameHeader==Nombre:
+paymentsucessDescriptionHeader==Descripción:
+paymentsucessRateHeader==Tarifa:
+paymentsucessBackButton==Volver
+paymentsucessPrintButton==Imprimir
+privacypolicySiteHeader==Política de privacidad
+processpaymentSiteHeader==Procesar el pago...
+settingsSiteHeader==Ajustes
+settingsCurrencyDescription==Moneda
+settingsCurrencyInfo==Información: No se puede cambiar la moneda para los nombramientos ya existentes.  
+settingsButtonSave==Guardar
+settingsButtonBack==Volver
+settingsSuccessSnackbar==OK. Los ajustes se guardaron con éxito
+settingsFailedSnackbar==Error. No se han podido guardar los ajustes. 

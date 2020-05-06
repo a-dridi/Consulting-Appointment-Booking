@@ -1,0 +1,135 @@
+th
+appAgentSectionMenutitle==ส่วนตัวแทน / ผู้ดูแลระบบ
+appLogoutButtonMenutitle==ออกจากระบบ
+appGeneralnoticeFootertitle==ประกาศทั่วไป
+appPrivacypolicyFootertitle==นโยบายความเป็นส่วนตัว
+appContactFootertitle==ติดต่อ
+adminSuccessSnackbar==การนัดหมายที่จองถูกลบเรียบร้อยแล้ว!
+adminGreeting==สวัสดี _%_
+adminHeaderAppointmentsToday==วันนี้: คุณมีการนัดหมาย _%_ ที่จองไว้สำหรับวันนี้
+adminAllCreatedAppointmentsButton==สร้างการนัดหมายทั้งหมด
+adminCreatenewappointmentsButton==สร้างการนัดหมายใหม่
+adminSettingsButton==การตั้งค่า
+adminTodayBookedAppointmentsHeader==วันนี้: จองนัดหมายโดยลูกค้า
+adminDateBookedAppointmentsTableHeader==วันที่
+adminClientnameBookedAppointmentsTableHeader==ชื่อลูกค้า
+adminClientemailBookedAppointmentsTableHeader==อีเมลลูกค้า
+adminClientTelephoneBookedAppointmentsTableHeader==โทรศัพท์ลูกค้า
+adminAppointmentNameBookedAppointmentsTableHeader==ชื่อแต่งตั้ง
+adminDescriptionBookedAppointmentsTableHeader==ลักษณะ
+adminRateBookedAppointmentsTableHeader==ประเมินค่า
+adminDeleteBookedAppointmentsTableHeader==ลบ
+adminDeleteBookedAppointmentsTableButton==ลบ
+adminNoBookedAppointmentsTablePlaceholder==คุณมีการนัดหมาย 0 รายการสำหรับวันนี้
+adminAllBookedAppointmentsHeader==ทั้งหมด: นัดหมายโดยลูกค้า
+adminDateAllBookedAppointmentsTableHeader==วันที่
+adminClientnameAllBookedAppointmentsTableHeader==ชื่อลูกค้า
+adminClientemailAllBookedAppointmentsTableHeader==อีเมลลูกค้า
+adminClienttelephoneAllBookedAppointmentsTableHeader==โทรศัพท์ลูกค้า
+adminAppointmentnameAllBookedAppointmentsTableHeader==ชื่อแต่งตั้ง
+adminDescriptionAllBookedAppointmentsTableHeader==ลักษณะ
+adminRateAllBookedAppointmentsTableHeader==ประเมินค่า
+adminDeleteAllBookedAppointmentsTableHeader==ลบ
+adminDeleteAllBookedAppointmentsTableButton==ลบ
+adminNoAllBookedAppointmentsTablePlaceholder==ไม่มีการนัดหมายที่ลูกค้าจองไว้
+adminCurrencySettingHeader==เลือกสกุลเงิน:
+adminCurrencySettingButton==ตกลง
+adminloginWrongPasswordSnackbar==กรุณาใส่ที่อยู่อีเมลที่ถูกต้องและรหัสผ่านของบัญชีผู้ดูแลระบบของคุณ!
+adminloginLoginFailedSnackbar==เข้าสู่ระบบล้มเหลว กรุณาใส่ที่อยู่อีเมลและรหัสผ่านที่ถูกต้องของบัญชีผู้ดูแลระบบของคุณ
+adminloginSiteHeader==ผู้ดูแลระบบเข้าสู่ระบบ
+adminloginFormEmail==Email:
+adminloginFormEmailPlaceholder==กรอกอีเมล
+adminloginFormPassword==รหัสผ่าน:
+adminloginFormPasswordPlaceholder==ใส่รหัสผ่าน
+adminloginFormLoginButton==เข้าสู่ระบบ
+adminloginNoAdminAccountCreatedText==คุณต้องลงทะเบียนบัญชีผู้ดูแลระบบก่อนที่คุณจะใช้แอปพลิเคชั่นนี้เพื่อการผลิต:
+adminloginRegisterLink==สมัครสมาชิก
+adminregisterSiteheader==ลงทะเบียนบัญชีผู้ดูแลระบบ
+adminregisterEmptyFieldSnackbar==โปรดป้อนฟิลด์ที่จำเป็นทั้งหมดให้ถูกต้อง!
+adminregisterPasswordNotSameSnackbar==การยืนยันรหัสผ่านและรหัสผ่านจะต้องเหมือนกัน!
+adminregisterPasswordTooShortSnackbar==รหัสผ่านจะต้องมีความยาวอย่างน้อย 6 ตัวอักษร!
+adminregisterRegistrationSuccessSnackbar==ตกลง. เสร็จสิ้นการลงทะเบียน กรุณาเข้าสู่ระบบด้วยข้อมูลบัญชีของคุณตอนนี้
+adminregisterRegistrationFailedSnackbar==การลงทะเบียนไม่สำเร็จ! โปรดป้อนฟิลด์ที่จำเป็นทั้งหมดให้ถูกต้อง
+adminregisterSitesubheader==คุณสามารถลงทะเบียนบัญชีผู้ดูแลระบบเพียงบัญชีเดียวเท่านั้นที่สามารถใช้ดูแผงควบคุมตัวแทน / ผู้ดูแลระบบของคุณ
+adminregisterAdminAccountCreated==บัญชีผู้ดูแลระบบมีการลงทะเบียนแล้ว โปรดใช้ข้อมูลรับรองบัญชีผู้ดูแลระบบของคุณเพื่อเข้าสู่ระบบ
+adminregisterFormName==ชื่อ
+adminregisterFormNamePlaceholder==ใส่ชื่อ
+adminregisterFormEmail==อีเมล์
+adminregisterFormEmailPlaceholder==กรอกอีเมล
+adminregisterFormPassword==รหัสผ่าน:
+adminregisterFormPasswordPlaceholder==ใส่รหัสผ่าน
+adminregisterFormPasswordconfirmation==ยืนยันรหัสผ่าน:
+adminregisterFormPasswordconfirmationPlaceholder==ใส่รหัสผ่านอีกครั้ง
+adminregisterFormTelephone==โทรศัพท์ (ไม่จำเป็น):
+adminregisterFormTelephonePlaceholder==ป้อนหมายเลขโทรศัพท์
+adminregisterFormNote==หมายเหตุ (ไม่จำเป็น):
+adminregisterFormNotePlaceholder==หมายเหตุเพิ่มเติม
+adminregisterFormRegisterButton==สมัครสมาชิก
+adminregisterLoginInfo==คุณมีบัญชีผู้ดูแลระบบหรือไม่?
+adminregisterLoginLink==เข้าสู่ระบบ
+bookSiteHeader==จองนัดนี้
+bookSiteSubheader==คลิกที่ปุ่มด้านล่างเพื่อชำระและจองนัดต่อไปนี้:
+bookTableTimedateHeader==เวลา - วันที่:
+bookTableNameHeader==ชื่อ:
+bookTableDescriptionHeader==รายละเอียด:
+bookTableRateHeader==ประเมินค่า:
+bookBookButtonAlt==ชำระเงินด้วย PayPal
+bookBookButtonText==หนังสือ
+contactSiteHeader==ติดต่อ
+contactSiteSubHeader==รายละเอียดการติดต่อ
+createSiteHeader==เพิ่มการนัดหมายใหม่
+createRateErrorSnackbar==ข้อผิดพลาด: อัตราของคุณจะต้องมีค่าอย่างน้อย 1 (> = 1)
+createSuccessSnackbar==เพิ่มการนัดหมายใหม่แล้ว
+createFormTImeoftheappointmentColumnPlaceholder==เวลา
+createFormDateoftheappointmentColumnHeader==วันที่ได้รับการแต่งตั้ง
+createFormDateoftheappointmentColumnPlaceholder==วันที่ได้รับการแต่งตั้ง
+createFormNameColumnHeader==ตำแหน่งของการนัดหมาย
+createFormNameColumnPlaceholder==ชื่อแต่งตั้ง
+createFormDescriptionColumnHeader==รายละเอียดของการนัดหมาย
+createFormDescriptionColumnPlaceholder==คำอธิบายการนัดหมาย
+createFormRateColumnPlaceholder==อัตรา (ราคา) - ค่าเริ่มต้น: 1 _%_
+createFormSaveButton==บันทึกการนัดหมาย
+createFormBackButton==กลับ
+editSiteHeader==แก้ไขการนัดหมาย
+editSuccessSnackbar==อัปเดตการนัดหมายเรียบร้อยแล้ว!
+editFormTimeoftheappointmentColumnPlaceholder==เวลา
+editFormDateoftheappointmentColumnHeader==วันที่ได้รับการแต่งตั้ง
+editFormDateoftheappointmentColumnPlaceholder==วันที่ได้รับการแต่งตั้ง
+editFormNameColumnHeader==ตำแหน่งของการนัดหมาย
+editFormDescriptionColumnHeader==รายละเอียดของการนัดหมาย
+editFormRateColumnHeader==อัตรา (ราคา) - ค่าเริ่มต้น: 1 _%_
+editFormSaveButton==บันทึกการนัดหมาย
+editFormBackButton==กลับ
+generalnoticeSiteHeader==ประกาศทั่วไป
+listAddnewappointmentButton==เพิ่มการนัดหมายใหม่
+listDeleteAppointmentSuccess==ลบการนัดหมายสำเร็จแล้ว!
+listAdmindashboardButton==แดชบอร์ดผู้ดูแลระบบ
+listTableDateHeader==วันที่
+listTableAppointmentNameHeader==ชื่อแต่งตั้ง
+listTableDescriptionHeader==ลักษณะ
+listTableRateHeader==ประเมินค่า
+listTableBooknowHeader==จองตอนนี้
+listTableBooknowButton==หนังสือ
+listTableEditdeleteHeader==แก้ไข / ลบ
+listTableEditButton==แก้ไข
+listTableDeleteButton==ลบ
+listNoAppointments==ไม่มีการนัดหมายในขณะนี้ โปรดกลับมาใหม่.
+paymentcancelSiteHeader==การชำระเงินถูกยกเลิก
+paymentcancelSiteSubtext==การนัดหมายของคุณไม่ได้ถูกจอง
+paymentsucessSiteHeader==ชำระเงินสำเร็จ
+paymentsucessSiteSubtext==จอง (id: _%_) ของคุณเรียบร้อยแล้ว
+paymentsucessDatetimeHeader==เวลา - วันที่:
+paymentsucessNameHeader==ชื่อ:
+paymentsucessDescriptionHeader==รายละเอียด:
+paymentsucessRateHeader==ประเมินค่า:
+paymentsucessBackButton==กลับ
+paymentsucessPrintButton==พิมพ์
+privacypolicySiteHeader==นโยบายความเป็นส่วนตัว
+processpaymentSiteHeader==ประมวลผลการชำระเงิน ...
+settingsSiteHeader==การตั้งค่า
+settingsCurrencyDescription==เงินตรา
+settingsCurrencyInfo==ข้อมูล: สกุลเงินไม่สามารถเปลี่ยนแปลงได้สำหรับการนัดหมายที่มีอยู่แล้ว
+settingsButtonSave==บันทึก
+settingsButtonBack==กลับ
+settingsSuccessSnackbar==ตกลง. บันทึกการตั้งค่าสำเร็จแล้ว
+settingsFailedSnackbar==ความผิดพลาด ไม่สามารถบันทึกการตั้งค่า

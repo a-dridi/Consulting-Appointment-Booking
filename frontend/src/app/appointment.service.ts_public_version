@@ -9,25 +9,26 @@ export class AppointmentService {
   uri = "api/"
   adminName: String = "";
 
-  constructor(private http: HttpClient) {
+   constructor(private http: HttpClient) {
   }
 
   getAppointments() {
-    return this.http.get(`${this.uri}appointments`);
+    return this.http.get(`${this.uri}/appointments`);
   }
 
   getAppointmentById(id) {
-    return this.http.get(`${this.uri}appointments/${id}`);
+    return this.http.get(`${this.uri}/appointments/${id}`);
   }
 
-  addAppointment(date, name, description, rate) {
+  addAppointment(date, name, description, rate, currency) {
     const appointment = {
       date: date,
       name: name,
       description: description,
-      rate: rate
+      rate: rate,
+      currency: currency
     };
-    return this.http.post(`${this.uri}appointments/add`, appointment);
+    return this.http.post(`${this.uri}/appointments/add`, appointment);
   }
 
   updateAppointment(id, date, name, description) {
@@ -36,51 +37,54 @@ export class AppointmentService {
       name: name,
       description: description
     };
-    return this.http.post(`${this.uri}appointments/update/${id}`, appointment);
+    return this.http.post(`${this.uri}/appointments/edit/${id}`, appointment);
   }
 
   deleteAppointment(id) {
-    return this.http.get(`${this.uri}appointments/delete/${id}`);
+    return this.http.get(`${this.uri}/appointments/delete/${id}`);
   }
 
-  bookAppointment(id, date, name, description, rate, clientId) {
+  bookAppointment(id, date, name, description, rate, currency, clientId) {
     const appointment = {
       date: date,
       name: name,
       description: description,
       rate: rate,
+      currency: currency,
       clientId: clientId
     }
-    return this.http.post(`${this.uri}appointments/book/${id}`, appointment);
+    return this.http.post(`${this.uri}/appointments/book/${id}`, appointment);
   }
 
   processPayment(paymentId, token, PayerID) {
-    return this.http.get(`${this.uri}psuccess/${paymentId}/${token}/${PayerID}`);
+    return this.http.get(`${this.uri}/psuccess/${paymentId}/${token}/${PayerID}`);
   }
 
   getBookedAppointmentById(id) {
-    return this.http.get(`${this.uri}bookedappointments/${id}`);
+    return this.http.get(`${this.uri}/bookedappointments/${id}`);
   }
 
   getBookedAppointments() {
-    return this.http.get(`${this.uri}bookedappointments`);
+    return this.http.get(`${this.uri}/bookedappointments`);
   }
 
   deleteBookedAppointment(id){
-    return this.http.get(`${this.uri}bookedappointments/delete/${id}`);
+    return this.http.get(`${this.uri}/bookedappointments/delete/${id}`);
   }
 
   //Check if admin user is authenticated to allow loading of admin section
   checkAdminAuthentication() {
-    return this.http.get(`${this.uri}admin`, {
+    //return this.http.get(`${this.uri}/admin`);
+    return this.http.get(`${this.uri}/admin`, {
       observe: 'body',
       withCredentials: true,
       headers: new HttpHeaders().append('Content-Type', 'application/json')
     })
   }
 
+
   doAdminLogin(body: any) {
-    return this.http.post(`${this.uri}login`, body, {
+    return this.http.post(`${this.uri}/login`, body, {
       observe: 'body',
       withCredentials: true,
       headers: new HttpHeaders().append('Content-Type', 'application/json')
@@ -89,7 +93,7 @@ export class AppointmentService {
 
 
   doAdminLogout() {
-    return this.http.get(`${this.uri}logout`, {
+    return this.http.get(`${this.uri}/logout`, {
       observe: 'body',
       withCredentials: true,
       headers: new HttpHeaders().append('Content-Type', 'application/json')
@@ -104,23 +108,60 @@ export class AppointmentService {
       telephone: telephone,
       note: note
     };
-    return this.http.post(`${this.uri}registration`, adminaccount);
+    return this.http.post(`${this.uri}/registration`, adminaccount);
   }
 
 
   getClientById(id) {
-    return this.http.get(`${this.uri}client/${id}`);
+    return this.http.get(`${this.uri}/client/${id}`);
   }
 
   getClients() {
-    return this.http.get(`${this.uri}clients`);
+    return this.http.get(`${this.uri}/clients`);
   }
 
   getBookedAppointmentsClients(){
-    return this.http.get(`${this.uri}bookedappointmentsclients`);
+    return this.http.get(`${this.uri}/bookedappointmentsclients`);
   }
 
   getBookedAppointmentsClientsToday(){
-    return this.http.get(`${this.uri}bookedappointmentsclientstoday`);
+    return this.http.get(`${this.uri}/bookedappointmentsclientstoday`);
   } 
+
+  getUiTextTranslationforLanguage(languagecode){
+    return this.http.get(`${this.uri}/language/${languagecode}`);
+
+  }
+  getAdminAccount() {
+    return this.http.get(`${this.uri}/adminaccounts`);
+  }
+
+  getAllAppSettings() {
+    return this.http.get(`${this.uri}/appsettings`);
+  }
+
+  addAppSettings(code, value) {
+    const appsetting = {
+      code: code,
+      value: value
+   };
+    return this.http.post(`${this.uri}/appsetting/add`, appsetting);
+  }
+
+  editAppSetting(code, value) {
+    const appsetting = {
+      code: code,
+      value: value
+   };
+    return this.http.post(`${this.uri}/appsetting/edit/${code}`, appsetting);
+  }
+
+  deleteAppSetting(id) {
+    return this.http.get(`${this.uri}/appsetting/delete/${id}`);
+  }
+
+  deleteAllAppSettings() {
+    return this.http.get(`${this.uri}/appsettings/deleteall`);
+  }
+
 }

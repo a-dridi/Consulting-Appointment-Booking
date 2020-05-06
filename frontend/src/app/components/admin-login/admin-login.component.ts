@@ -4,6 +4,8 @@ import { Router } from '@angular/router';
 import { AppointmentService } from 'src/app/appointment.service';
 import { AdminDataSharingService } from 'src/app/admindatasharingservice';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { AdminAccount } from 'src/app/adminaccount.model';
+import { AppComponent } from 'src/app/app.component';
 
 @Component({
   selector: 'app-admin-login',
@@ -11,13 +13,26 @@ import { MatSnackBar } from '@angular/material/snack-bar';
   styleUrls: ['./admin-login.component.css']
 })
 export class AdminLoginComponent implements OnInit {
-
+  public uiString: Map<String, String>;
   message: String;
   showMessage: boolean = false;
   loginForm: FormGroup;
- 
+  adminAccountCreated: boolean = true;
+  emailPlaceholder: String;
+  passwordPlaceholder: String;
 
   constructor(private adminDataSharingService: AdminDataSharingService, private adminloginForm: FormBuilder, private router: Router, private appointmentService: AppointmentService, private snackBar: MatSnackBar) {
+    this.uiString = AppComponent.uiStringFinal;
+    this.emailPlaceholder = this.uiString.get("adminloginFormEmailPlaceholder");
+    this.passwordPlaceholder = this.uiString.get("adminloginFormPasswordPlaceholder");
+
+    this.appointmentService
+    .getAdminAccount()
+    .subscribe((data: AdminAccount[]) => {
+      if(data.length<1){
+        this.adminAccountCreated = false;
+      }
+    });
     this.loginForm = this.adminloginForm.group({
       email: ['', Validators.required],
       password: ['', Validators.required]
@@ -39,7 +54,7 @@ export class AdminLoginComponent implements OnInit {
 
   loginadmin(email, password) {
     if (!this.loginForm.valid) {
-      this.snackBar.open(" Please enter your correct email address and password of your admin account!", "OK", {
+      this.snackBar.open("" + this.uiString.get("adminloginWrongPasswordSnackbar"), "OK", {
         duration: 4000
       });
       return;
@@ -54,7 +69,7 @@ export class AdminLoginComponent implements OnInit {
           this.router.navigate(['/admin']);
           this.router.navigated = false;
         },
-        error => this.snackBar.open("LOGIN FAILED. Please enter your correct email address and password of your admin account. ", "OK", {
+        error => this.snackBar.open(""+this.uiString.get("adminloginLoginFailedSnackbar"), "OK", {
           duration: 10000
         })
       );

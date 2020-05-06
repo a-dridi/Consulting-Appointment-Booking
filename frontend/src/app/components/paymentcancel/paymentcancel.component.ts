@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AppComponent } from 'src/app/app.component';
 
 @Component({
   selector: 'app-paymentcancel',
@@ -6,8 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./paymentcancel.component.css']
 })
 export class PaymentcancelComponent implements OnInit {
+  public uiString: Map<String, String>;
 
-  constructor() { }
+  constructor() { 
+    this.uiString = AppComponent.uiStringFinal;
+  }
 
   ngOnInit(): void {
   }

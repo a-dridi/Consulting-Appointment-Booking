@@ -19,7 +19,7 @@ import {MatCardModule} from "@angular/material/card";
 import {MatTableModule} from "@angular/material/table";
 import {MatDividerModule} from "@angular/material/divider";
 import {MatSnackBarModule} from '@angular/material/snack-bar'; 
-import {ReactiveFormsModule} from "@angular/forms";
+import {ReactiveFormsModule, FormsModule} from "@angular/forms";
 import {MatDatepickerModule} from '@angular/material/datepicker'; 
 import {MatNativeDateModule} from '@angular/material/core'; 
 import {AppointmentService} from './appointment.service';
@@ -39,6 +39,7 @@ import { AdminDataSharingService } from './admindatasharingservice';
 import { GeneralNoticeComponent } from './components/general-notice/general-notice.component';
 import { PrivacyPolicyComponent } from './components/privacy-policy/privacy-policy.component';
 import { ContactComponent } from './components/contact/contact.component';
+import { SettingsComponent } from './components/settings/settings.component';
 
 const appRoutes: Routes = [
 {path: "create", component: CreateComponent},
@@ -55,6 +56,7 @@ const appRoutes: Routes = [
 {path: 'general-notice', component: GeneralNoticeComponent},
 {path: 'privacy-policy', component: PrivacyPolicyComponent},
 {path: 'contact', component: ContactComponent},
+{path: 'settings', component: SettingsComponent},
 
 {path: '', redirectTo: 'allappointments', pathMatch: 'full'}
 ];
@@ -79,7 +81,8 @@ const appRoutes: Routes = [
     CheckadminauthenticationComponent,
     GeneralNoticeComponent,
     PrivacyPolicyComponent,
-    ContactComponent
+    ContactComponent,
+    SettingsComponent
   ],
   imports: [
     MatToolbarModule,
@@ -103,7 +106,7 @@ const appRoutes: Routes = [
     MatNativeDateModule,
     NgxMaterialTimepickerModule,
     MatProgressSpinnerModule
-  ],
+    ],
   providers: [AppointmentService, {provide: MAT_DATE_LOCALE, useValue: 'fr-FR'}, AdminDataSharingService],
   bootstrap: [AppComponent]
 })

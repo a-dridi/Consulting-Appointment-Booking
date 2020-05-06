@@ -1,11 +1,11 @@
 <div class="card-container-centered">
     <mat-card class="payment-canceled-header">
-        <h4>Payment was cancelled</h4>
+        <h4>{{uiString.get("paymentcancelSiteHeader")}}</h4>
     </mat-card>
     <mat-divider></mat-divider>
     <mat-card>
         <div class="field-full-width">
-            Your appointment was not booked.
+            {{uiString.get("paymentcancelSiteSubtext")}}
         </div>
         <br />
         <button mat-raised-button color="accent" routerLink="/allappointments">Back</button>

@@ -1,0 +1,135 @@
+pt
+appAgentSectionMenutitle==Seção de Agente / Administração
+appLogoutButtonMenutitle==Sair
+appGeneralnoticeFootertitle==Aviso Geral
+appPrivacypolicyFootertitle==Política de Privacidade
+appContactFootertitle==Contato
+adminSuccessSnackbar==Marcação de Compromisso foi excluída com sucesso!
+adminGreeting==Olá _%_
+adminHeaderAppointmentsToday==Hoje: Você tem _%_ agendadas para hoje
+adminAllCreatedAppointmentsButton==Todos os compromissos criados
+adminCreatenewappointmentsButton==Criar novos compromissos
+adminSettingsButton==Configurações
+adminTodayBookedAppointmentsHeader==Hoje: Agendamento de consultas pelos clientes
+adminDateBookedAppointmentsTableHeader==Data
+adminClientnameBookedAppointmentsTableHeader==Nome do Cliente
+adminClientemailBookedAppointmentsTableHeader==E-mail do Cliente
+adminClientTelephoneBookedAppointmentsTableHeader==Telefone do Cliente
+adminAppointmentNameBookedAppointmentsTableHeader==Nome da Consulta
+adminDescriptionBookedAppointmentsTableHeader==Descrição
+adminRateBookedAppointmentsTableHeader==Tarifa
+adminDeleteBookedAppointmentsTableHeader==Excluir
+adminDeleteBookedAppointmentsTableButton==Excluir
+adminNoBookedAppointmentsTablePlaceholder==Você tem 0 compromissos agendados para hoje
+adminAllBookedAppointmentsHeader==Todos: Agendamento de compromissos pelos clientes
+adminDateAllBookedAppointmentsTableHeader==Data
+adminClientnameAllBookedAppointmentsTableHeader==Nome do Cliente
+adminClientemailAllBookedAppointmentsTableHeader==E-mail do Cliente
+adminClienttelephoneAllBookedAppointmentsTableHeader==Telefone do Cliente
+adminAppointmentnameAllBookedAppointmentsTableHeader==Nome da Consulta
+adminDescriptionAllBookedAppointmentsTableHeader==Descrição
+adminRateAllBookedAppointmentsTableHeader==Tarifa
+adminDeleteAllBookedAppointmentsTableHeader==Excluir
+adminDeleteAllBookedAppointmentsTableButton==Excluir
+adminNoAllBookedAppointmentsTablePlaceholder==Não há compromissos agendados por seus clientes. 
+adminCurrencySettingHeader==Selecione a moeda:
+adminCurrencySettingButton==OK
+adminloginWrongPasswordSnackbar==Por favor, digite seu endereço de e-mail e senha corretos da sua conta administrativa!
+adminloginLoginFailedSnackbar==LOGIN FAILED. Por favor, digite seu endereço de e-mail e senha corretos da sua conta de administrador.
+adminloginSiteHeader==Login de Administrador
+adminloginFormEmail==Email:
+adminloginFormEmailPlaceholder==Digite o e-mail
+adminloginFormPassword==Senha:
+adminloginFormPasswordPlaceholder==Digite a Senha
+adminloginFormLoginButton==Login
+adminloginNoAdminAccountCreatedText==VOCÊ TEM QUE REGISTRAR UMA CONTA DE ADMINISTRADOR ANTES DE USAR ESTE APLICATIVO PARA USO EM PRODUÇÃO:
+adminloginRegisterLink==Cadastre-se
+adminregisterSiteheader==Cadastrar Conta Admin
+adminregisterEmptyFieldSnackbar==Por favor, digite todos os campos obrigatórios corretamente!
+adminregisterPasswordNotSameSnackbar==A senha e a confirmação da senha devem ser as mesmas!
+adminregisterPasswordTooShortSnackbar==A senha deve ter pelo menos 6 caracteres!
+adminregisterRegistrationSuccessSnackbar==OK. O cadastro é feito. Por favor, faça o login com as credenciais da sua conta agora.
+adminregisterRegistrationFailedSnackbar==O cadastro falhou! Por favor, digite todos os campos obrigatórios corretamente.
+adminregisterSitesubheader==Você pode registrar apenas uma conta de administrador, que pode ser usada para visualizar o painel de controle do seu agente/administrador.
+adminregisterAdminAccountCreated==A conta de administrador já está registrada. Por favor, use as credenciais da sua conta de administrador para fazer o login.
+adminregisterFormName==Nome
+adminregisterFormNamePlaceholder==Digite o nome
+adminregisterFormEmail==Email
+adminregisterFormEmailPlaceholder==Digite o e-mail
+adminregisterFormPassword==Senha:
+adminregisterFormPasswordPlaceholder==Digite a Senha
+adminregisterFormPasswordconfirmation==Confirme a senha:
+adminregisterFormPasswordconfirmationPlaceholder==Digite a Senha novamente
+adminregisterFormTelephone==Telefone (opcional):
+adminregisterFormTelephonePlaceholder==Digite o número do telefone
+adminregisterFormNote==Nota (opcional):
+adminregisterFormNotePlaceholder==Nota Opcional
+adminregisterFormRegisterButton==Cadastre-se
+adminregisterLoginInfo==Você tem uma conta administrativa?
+adminregisterLoginLink==Login
+bookSiteHeader==Marque esta consulta
+bookSiteSubheader==Clique no botão abaixo para pagar e marcar a seguinte consulta:
+bookTableTimedateHeader==Hora - Data:
+bookTableNameHeader==Nome:
+bookTableDescriptionHeader==Descrição:
+bookTableRateHeader==Tarifa:
+bookBookButtonAlt==Confira com o PayPal
+bookBookButtonText==Livro
+contactSiteHeader==Contato
+contactSiteSubHeader==Dados para contato
+createSiteHeader==Adicionar novo compromisso
+createRateErrorSnackbar==ERRO: Sua tarifa deve ter um valor de pelo menos 1 (>=1)
+createSuccessSnackbar==Novo compromisso foi adicionado
+createFormTImeoftheappointmentColumnPlaceholder==Hora
+createFormDateoftheappointmentColumnHeader==Data da consulta
+createFormDateoftheappointmentColumnPlaceholder==Data da consulta
+createFormNameColumnHeader==Título da nomeação
+createFormNameColumnPlaceholder==Título da nomeação
+createFormDescriptionColumnHeader==Descrição da consulta
+createFormDescriptionColumnPlaceholder==Descrição da nomeação
+createFormRateColumnPlaceholder==Taxa (Preço) - Predefinição: 1 _%_
+createFormSaveButton==Salvar consulta
+createFormBackButton==Voltar
+editSiteHeader==Editar consulta
+editSuccessSnackbar==A nomeação foi atualizada com sucesso!
+editFormTimeoftheappointmentColumnPlaceholder==Hora
+editFormDateoftheappointmentColumnHeader==Data da consulta
+editFormDateoftheappointmentColumnPlaceholder==Data da consulta
+editFormNameColumnHeader==Título da nomeação
+editFormDescriptionColumnHeader==Descrição da consulta
+editFormRateColumnHeader==Taxa (Preço) - Predefinição: 1 _%_
+editFormSaveButton==Salvar consulta
+editFormBackButton==Voltar
+generalnoticeSiteHeader==Aviso Geral
+listAddnewappointmentButton==Adicionar novo compromisso
+listDeleteAppointmentSuccess==A nomeação foi excluída com sucesso!
+listAdmindashboardButton==Painel de administração
+listTableDateHeader==Data
+listTableAppointmentNameHeader==Nome da Consulta
+listTableDescriptionHeader==Descrição
+listTableRateHeader==Tarifa
+listTableBooknowHeader==Reserve agora
+listTableBooknowButton==Livro
+listTableEditdeleteHeader==Editar/eliminar
+listTableEditButton==Editar
+listTableDeleteButton==Excluir
+listNoAppointments==Não há compromissos disponíveis no momento. Por favor, volte mais tarde.
+paymentcancelSiteHeader==O pagamento foi cancelado.
+paymentcancelSiteSubtext==Sua consulta não foi agendada.
+paymentsucessSiteHeader==O pagamento foi bem sucedido.
+paymentsucessSiteSubtext==Sua consulta (id: _%_) foi agendada com sucesso.
+paymentsucessDatetimeHeader==Hora - Data:
+paymentsucessNameHeader==Nome:
+paymentsucessDescriptionHeader==Descrição:
+paymentsucessRateHeader==Tarifa:
+paymentsucessBackButton==Voltar
+paymentsucessPrintButton==Imprimir
+privacypolicySiteHeader==Política de Privacidade
+processpaymentSiteHeader==Processar o pagamento...
+settingsSiteHeader==Configurações
+settingsCurrencyDescription==Moeda
+settingsCurrencyInfo==Informações: A moeda não pode ser alterada para compromissos já existentes.  
+settingsButtonSave==Salvar
+settingsButtonBack==Voltar
+settingsSuccessSnackbar==OK. As configurações foram salvas com sucesso.
+settingsFailedSnackbar==Erro. As configurações não puderam ser salvas. 

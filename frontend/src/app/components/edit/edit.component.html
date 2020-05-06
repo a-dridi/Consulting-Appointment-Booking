@@ -2,38 +2,38 @@
     <br>
     <mat-card class="container-appointment-main">
         <section class="mat-typograhy">
-            <h3>Edit appointment</h3>
+            <h3>{{uiString.get("editSiteHeader")}}</h3>
         </section>
         <mat-divider></mat-divider>
         <br>
         <form [formGroup]="updateForm" class="update-form">
             <div fxLayout="row" class="field-full-width">
                 <mat-form-field>
-                    <input matInput [ngxTimepicker]="timepicker" [format]="24" placeholder="Time" value="{{selectedTime}}">
+                    <input matInput [ngxTimepicker]="timepicker" [format]="24" placeholder="{{timePlaceholder}}" value="{{selectedTime}}">
                 </mat-form-field>
                 <ngx-material-timepicker (timeSet)="updateTime($event)" #timepicker></ngx-material-timepicker>
                 <mat-form-field>
-                    <mat-label>Date of the appointment</mat-label>
-                    <input matInput [matDatepicker]="picker" placeholder="Date of the appointment" formControlName="date" #date>
+                    <mat-label>{{uiString.get("editFormDateoftheappointmentColumnHeader")}}</mat-label>
+                    <input matInput [matDatepicker]="picker" placeholder="{{datePlaceholder}}" formControlName="date" #date>
                     <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
                     <mat-datepicker touchUi #picker></mat-datepicker>
                 </mat-form-field>
             </div>    
             <mat-form-field class="field-full-width">
-                <input matInput placeholder="Name of the appointment" formControlName="name" #name>
+                <input matInput placeholder="{{namePlaceholder}}" formControlName="name" #name>
             </mat-form-field>
             <mat-form-field class="field-full-width">
-                <input matInput placeholder="Description of the appointment" formControlName="description" #description>
+                <input matInput placeholder="{{descriptionPlaceholder}}" formControlName="description" #description>
             </mat-form-field>
             <mat-form-field class="field-full-width">
-                <input matInput placeholder="Rate of the appointment in $ (USD)" formControlName="rate" #rate>
+                <input matInput placeholder="{{ratePlaceholder}}" formControlName="rate" #rate> {{selectedCurrency}}
             </mat-form-field>
             <mat-divider>
             </mat-divider>
             <br>
             <br>
-            <button type="submit" (click)="updateAppointment(date.value, name.value, description.value)" [disabled]="updateForm.invalid" mat-raised-button color="primary" class="button-submit-appointment">Save appointment</button>
-            <button mat-raised-button color="accent" routerLink="/allappointments">Back</button>
+            <button type="submit" (click)="updateAppointment(date.value, name.value, description.value)" [disabled]="updateForm.invalid" mat-raised-button color="primary" class="button-submit-appointment">{{uiString.get("editFormSaveButton")}}</button>
+            <button mat-raised-button color="accent" routerLink="/allappointments">< {{uiString.get("editFormBackButton")}}</button>
         </form>
     </mat-card>
  </div>

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AppointmentService } from '../../appointment.service';
 import { Router } from '@angular/router';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { AppComponent } from 'src/app/app.component';
 
 @Component({
   selector: 'app-processpayment',
@@ -9,10 +10,13 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
   styleUrls: ['./processpayment.component.css']
 })
 export class ProcesspaymentComponent implements OnInit {
+  public uiString: Map<String, String>;
 
   loading: Boolean = true;
 
   constructor(private appointmentService: AppointmentService, private router: Router, private spinnerModule: MatProgressSpinnerModule) {
+    this.uiString = AppComponent.uiStringFinal;
+
     this.doPayment();
   }
 

@@ -1,0 +1,135 @@
+de
+appAgentSectionMenutitle==Agent / Verwaltungsbereich
+appLogoutButtonMenutitle==Abmeldung
+appGeneralnoticeFootertitle==Allgemeiner Hinweis
+appPrivacypolicyFootertitle==Datenschutzerklärung
+appContactFootertitle==Kontakt
+adminSuccessSnackbar==Gebuchter Termin wurde erfolgreich gelöscht!
+adminGreeting==Hallo _%_
+adminHeaderAppointmentsToday==Heute: Sie haben _%_ Termine für heute gebucht
+adminAllCreatedAppointmentsButton==Alle erstellten Termine
+adminCreatenewappointmentsButton==Neue Termine erstellen
+adminSettingsButton==Einstellungen
+adminTodayBookedAppointmentsHeader==Heute: Gebuchte Termine von Klienten
+adminDateBookedAppointmentsTableHeader==Datum
+adminClientnameBookedAppointmentsTableHeader==Name des Kunden
+adminClientemailBookedAppointmentsTableHeader==Client E-Mail
+adminClientTelephoneBookedAppointmentsTableHeader==Kunden-Telefon
+adminAppointmentNameBookedAppointmentsTableHeader==Name des Termins
+adminDescriptionBookedAppointmentsTableHeader==Beschreibung
+adminRateBookedAppointmentsTableHeader==Preis
+adminDeleteBookedAppointmentsTableHeader==löschen
+adminDeleteBookedAppointmentsTableButton==löschen
+adminNoBookedAppointmentsTablePlaceholder==Sie haben 0 gebuchte Termine für heute
+adminAllBookedAppointmentsHeader==Alle: Gebuchte Termine von Klienten
+adminDateAllBookedAppointmentsTableHeader==Datum
+adminClientnameAllBookedAppointmentsTableHeader==Name des Kunden
+adminClientemailAllBookedAppointmentsTableHeader==Client E-Mail
+adminClienttelephoneAllBookedAppointmentsTableHeader==Kunden-Telefon
+adminAppointmentnameAllBookedAppointmentsTableHeader==Name des Termins
+adminDescriptionAllBookedAppointmentsTableHeader==Beschreibung
+adminRateAllBookedAppointmentsTableHeader==Preis
+adminDeleteAllBookedAppointmentsTableHeader==löschen
+adminDeleteAllBookedAppointmentsTableButton==löschen
+adminNoAllBookedAppointmentsTablePlaceholder==Es gibt keine von Ihren Kunden gebuchten Termine. 
+adminCurrencySettingHeader==Währung auswählen:
+adminCurrencySettingButton==OK
+adminloginWrongPasswordSnackbar==Bitte geben Sie Ihre korrekte E-Mail-Adresse und das Passwort Ihres Verwaltungskontos ein!
+adminloginLoginFailedSnackbar==ANMELDUNG FEHLGESCHLAGEN. Bitte geben Sie Ihre korrekte E-Mail-Adresse und das Passwort Ihres Admin-Kontos ein.
+adminloginSiteHeader==Admin-Anmeldung
+adminloginFormEmail==E-Mail:
+adminloginFormEmailPlaceholder==E-Mail eingeben
+adminloginFormPassword==Kennwort:
+adminloginFormPasswordPlaceholder==Passwort eingeben
+adminloginFormLoginButton==Anmeldung
+adminloginNoAdminAccountCreatedText==SIE MÜSSEN EIN ADMIN-KONTO REGISTRIEREN, BEVOR SIE DIESE ANWENDUNG FÜR DEN PRODUKTIONSEINSATZ VERWENDEN KÖNNEN:
+adminloginRegisterLink==Registrieren
+adminregisterSiteheader==Administratorkonto registrieren
+adminregisterEmptyFieldSnackbar==Bitte füllen Sie alle Pflichtfelder korrekt aus!
+adminregisterPasswordNotSameSnackbar==Passwort und Passwortbestätigung müssen gleich sein!
+adminregisterPasswordTooShortSnackbar==Das Passwort muss mindestens 6 Zeichen lang sein!
+adminregisterRegistrationSuccessSnackbar==OK. Die Registrierung ist abgeschlossen. Bitte melden Sie sich jetzt mit Ihren Zugangsdaten an.
+adminregisterRegistrationFailedSnackbar==Registrierung fehlgeschlagen! Bitte füllen Sie alle Pflichtfelder korrekt aus.
+adminregisterSitesubheader==Sie können nur ein Admin-Konto registrieren, das zur Anzeige Ihres Agenten/Admin-Dashboards verwendet werden kann.
+adminregisterAdminAccountCreated==Das Admin-Konto ist bereits registriert. Bitte benutzen Sie Ihre Admin-Konto-Anmeldedaten, um sich einzuloggen.
+adminregisterFormName==Name
+adminregisterFormNamePlaceholder==Name eingeben
+adminregisterFormEmail==E-Mail
+adminregisterFormEmailPlaceholder==E-Mail eingeben
+adminregisterFormPassword==Kennwort:
+adminregisterFormPasswordPlaceholder==Passwort eingeben
+adminregisterFormPasswordconfirmation==Bestätigen Sie das Passwort:
+adminregisterFormPasswordconfirmationPlaceholder==Passwort erneut eingeben
+adminregisterFormTelephone==Telefon (fakultativ):
+adminregisterFormTelephonePlaceholder==Telefonnummer eingeben
+adminregisterFormNote==Anmerkung (fakultativ):
+adminregisterFormNotePlaceholder==Optionale Anmerkung
+adminregisterFormRegisterButton==Registrieren
+adminregisterLoginInfo==Sie haben ein Administratorkonto?
+adminregisterLoginLink==Anmeldung
+bookSiteHeader==Diesen Termin buchen
+bookSiteSubheader==Klicken Sie auf die Schaltfläche unten, um den folgenden Termin zu bezahlen und zu buchen:
+bookTableTimedateHeader==Uhrzeit - Datum:
+bookTableNameHeader==Name: Name:
+bookTableDescriptionHeader==Beschreibung:
+bookTableRateHeader==Preis:
+bookBookButtonAlt==Mit PayPal auschecken
+bookBookButtonText==Buch
+contactSiteHeader==Kontakt
+contactSiteSubHeader==Kontaktdaten
+createSiteHeader==Neuen Termin hinzufügen
+createRateErrorSnackbar==FEHLER: Ihr Satz muss einen Wert von mindestens 1 (>=1) haben.
+createSuccessSnackbar==Neue Ernennung wurde hinzugefügt
+createFormTImeoftheappointmentColumnPlaceholder==Zeit
+createFormDateoftheappointmentColumnHeader==Datum der Ernennung
+createFormDateoftheappointmentColumnPlaceholder==Datum der Ernennung
+createFormNameColumnHeader==Titel der Ernennung
+createFormNameColumnPlaceholder==Titel des Termins
+createFormDescriptionColumnHeader==Beschreibung des Termins
+createFormDescriptionColumnPlaceholder==Beschreibung des Termins
+createFormRateColumnPlaceholder==Rate (Preis) - Standardwert: 1 _%_
+createFormSaveButton==Termin speichern
+createFormBackButton==Zurück
+editSiteHeader==Termin bearbeiten
+editSuccessSnackbar==Der Termin wurde erfolgreich aktualisiert!
+editFormTimeoftheappointmentColumnPlaceholder==Zeit
+editFormDateoftheappointmentColumnHeader==Datum der Ernennung
+editFormDateoftheappointmentColumnPlaceholder==Datum der Ernennung
+editFormNameColumnHeader==Titel der Ernennung
+editFormDescriptionColumnHeader==Beschreibung des Termins
+editFormRateColumnHeader==Rate (Preis) - Standardwert: 1 _%_
+editFormSaveButton==Termin speichern
+editFormBackButton==Zurück
+generalnoticeSiteHeader==Allgemeiner Hinweis
+listAddnewappointmentButton==Neuen Termin hinzufügen
+listDeleteAppointmentSuccess==Termin wurde erfolgreich gelöscht!
+listAdmindashboardButton==Admin-Dashboard
+listTableDateHeader==Datum
+listTableAppointmentNameHeader==Name des Termins
+listTableDescriptionHeader==Beschreibung
+listTableRateHeader==Preis
+listTableBooknowHeader==Jetzt buchen
+listTableBooknowButton==Buch
+listTableEditdeleteHeader==Bearbeiten/Löschen
+listTableEditButton==bearbeiten
+listTableDeleteButton==löschen
+listNoAppointments==Zur Zeit sind keine Termine verfügbar. Bitte kommen Sie später wieder.
+paymentcancelSiteHeader==Zahlung wurde storniert
+paymentcancelSiteSubtext==Ihr Termin wurde nicht gebucht.
+paymentsucessSiteHeader==Die Zahlung war erfolgreich.
+paymentsucessSiteSubtext==Ihr Termin (id: _%_) wurde erfolgreich gebucht.
+paymentsucessDatetimeHeader==Zeit - Datum:
+paymentsucessNameHeader==Ihr Name:
+paymentsucessDescriptionHeader==Beschreibung: Beschreibung:
+paymentsucessRateHeader==Preis:
+paymentsucessBackButton==Zurück
+paymentsucessPrintButton==Drucken
+privacypolicySiteHeader==Datenschutzerklärung
+processpaymentSiteHeader==Zahlung bearbeiten...
+settingsSiteHeader==Einstellungen
+settingsCurrencyDescription==Währung
+settingsCurrencyInfo==Informationen: Für bereits bestehende Termine kann die Währung nicht geändert werden.  
+settingsButtonSave==Speichern Sie
+settingsButtonBack==Zurück
+settingsSuccessSnackbar==OK. Einstellungen wurden erfolgreich gespeichert
+settingsFailedSnackbar==Fehler. Einstellungen konnten nicht gespeichert werden. 

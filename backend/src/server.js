@@ -61,7 +61,7 @@ app.use(cors({
             return callback(null, true);
         }
 
-		
+
         if (allowedOrigins.indexOf(origin) === -1) {
             var msg = 'The CORS policy for this site does not ' +
                 'allow access from the specified Origin.';
@@ -93,6 +93,52 @@ app.use(session({
 }));
 app.use(passport.initialize());
 app.use(passport.session());
+
+router.route("/appointments/:id").get((req, res) => {
+    AvailableAppointment.findById(req.params.id, (err, appointment) => {
+        if (err) {
+            console.log("DB error - getOneAvailableAppointment: " + err);
+        } else {
+            res.json(appointment);
+        }
+    })
+});
+
+/**
+ * Load all ui text of a translation from a file in the folder "languages"
+ */
+router.route("/language/:languagecode").get((req, res) => {
+    Languages.find({ 'language': ':languagecode' }, 'code translation', function (err, translation) {
+        if (err) {
+            console.log(err);
+            return;
+        }
+
+        if (data.length == 0) {
+            console.log("Translation not available. Select default English translation ")
+            Languages.find({ 'language': 'en' }, 'code translation', function (err, translation) {
+                if (err) {
+                    console.log(err);
+                    return;
+                }
+
+                if (data.length == 0) {
+                    console.log("Please add at least one translation. A default translation English");
+                    return;
+                }
+
+                //Process data
+                res.json(translation);
+            });
+            return;
+        }
+
+        //Process data
+        res.json(translation);
+    });
+});
+
+
 
 // **** Admin authentication routes START ****
 
@@ -181,7 +227,7 @@ router.route('/logout').get((req, res, next) => {
     if (isAdminUserAuthenticated(req, res, next)) {
         req.logout();
         res.json("Logout was successful.");
-      //res.redirect('allappointments');
+        //res.redirect('allappointments');
     }
 })
 

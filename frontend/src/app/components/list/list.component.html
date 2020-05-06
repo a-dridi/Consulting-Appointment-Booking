@@ -2,10 +2,10 @@
     <mat-card class="container-appointment-main">
         <div *ngIf="adminUserAuthenticated">
             <button mat-raised-button color="orange" routerLink="/create">
-                <mat-icon aria-label="Add icon">add_box</mat-icon> Add new appointment
+                <mat-icon aria-label="Add icon">add_box</mat-icon> {{uiString.get("listAddnewappointmentButton")}}
             </button>
             <button mat-raised-button color="orange" routerLink="/admin" style="margin-left: 25px;">
-                <mat-icon aria-label="Dashboard icon">dashboard</mat-icon> Admin Dashboard
+                <mat-icon aria-label="Dashboard icon">dashboard</mat-icon> {{uiString.get("listAdmindashboardButton")}}
             </button>
             <br>
             <br>
@@ -14,34 +14,34 @@
         <br>
         <table mat-table [dataSource]="appointments">
             <ng-container matColumnDef="date">
-                <th mat-header-cell *matHeaderCellDef class="main-column-appointment">Date</th>
+                <th mat-header-cell *matHeaderCellDef class="main-column-appointment">{{uiString.get("listTableDateHeader")}} </th>
                 <td mat-cell *matCellDef="let element" class="main-column-appointment">
                     {{element.date | date: "dd.MM.yyyy HH:mm"}}</td>
             </ng-container>
             <ng-container matColumnDef="name">
-                <th mat-header-cell *matHeaderCellDef>Appointment Name</th>
+                <th mat-header-cell *matHeaderCellDef>{{uiString.get("listTableAppointmentNameHeader")}}</th>
                 <td mat-cell *matCellDef="let element"> {{element.name}}</td>
             </ng-container>
             <ng-container matColumnDef="description">
-                <th mat-header-cell *matHeaderCellDef>Description</th>
+                <th mat-header-cell *matHeaderCellDef>{{uiString.get("listTableDescriptionHeader")}}</th>
                 <td mat-cell *matCellDef="let element"> {{element.description}}</td>
             </ng-container>
             <ng-container matColumnDef="rate">
-                <th mat-header-cell *matHeaderCellDef>Rate in $ (USD)</th>
-                <td mat-cell *matCellDef="let element"> {{element.rate}}</td>
+                <th mat-header-cell *matHeaderCellDef>{{uiString.get("listTableRateHeader")}}</th>
+                <td mat-cell *matCellDef="let element"> {{element.rate}} {{element.currency}}</td>
             </ng-container>
 
             <ng-container matColumnDef="book">
-                <th mat-header-cell *matHeaderCellDef class="main-column-appointment">Book now</th>
+                <th mat-header-cell *matHeaderCellDef class="main-column-appointment">{{uiString.get("listTableBooknowHeader")}}</th>
                 <td mat-cell *matCellDef="let element"> <button mat-button color="blue"
-                        (click)="bookAppointment(element._id)">Book</button></td>
+                        (click)="bookAppointment(element._id)">{{uiString.get("listTableBooknowButton")}}</button></td>
             </ng-container>
 
             <ng-container matColumnDef="edit-delete" *ngIf="adminUserAuthenticated">
-                <th mat-header-cell *matHeaderCellDef class="mat-column-right">Edit/Delete</th>
+                <th mat-header-cell *matHeaderCellDef class="mat-column-right">{{uiString.get("listTableEditdeleteHeader")}}</th>
                 <td mat-cell *matCellDef="let element" class="mat-column-right">
-                    <button mat-button color="primary" (click)="editAppointment(element._id)">Edit</button>
-                    <button mat-button color="warn" (click)="deleteAppointment(element._id)">Delete</button>
+                    <button mat-button color="primary" (click)="editAppointment(element._id)">{{uiString.get("listTableEditButton")}}</button>
+                    <button mat-button color="warn" (click)="deleteAppointment(element._id)">{{uiString.get("listTableDeleteButton")}}</button>
                 </td>
             </ng-container>
 
@@ -51,7 +51,7 @@
         </table>
 
         <div *ngIf="appointments.length < 1">
-            <h4 style="text-align: center; margin-top: 10px;">There are no available appointments at the moment. Please come back later.</h4>
+            <h4 style="text-align: center; margin-top: 10px;">{{uiString.get("listNoAppointments")}}</h4>
         </div>
 
     </mat-card>

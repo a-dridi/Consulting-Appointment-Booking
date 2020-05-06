@@ -1,0 +1,135 @@
+pl
+appAgentSectionMenutitle==Agent / Sekcja Administracyjna
+appLogoutButtonMenutitle==Logout
+appGeneralnoticeFootertitle==Uwaga ogólna
+appPrivacypolicyFootertitle==Polityka prywatności
+appContactFootertitle==Kontakt
+adminSuccessSnackbar==Rezerwowana nominacja została pomyślnie usunięta!
+adminGreeting==Witajcie _%_
+adminHeaderAppointmentsToday==Dzisiaj: Masz _%_ zarezerwowane spotkania na dzisiaj.
+adminAllCreatedAppointmentsButton==Wszystkie utworzone spotkania
+adminCreatenewappointmentsButton==Tworzenie nowych nominacji
+adminSettingsButton==Ustawienia
+adminTodayBookedAppointmentsHeader==Dzisiaj: Rezerwowane spotkania przez klientów
+adminDateBookedAppointmentsTableHeader==Data
+adminClientnameBookedAppointmentsTableHeader==Nazwa klienta
+adminClientemailBookedAppointmentsTableHeader==Klient Email
+adminClientTelephoneBookedAppointmentsTableHeader==Telefon klienta
+adminAppointmentNameBookedAppointmentsTableHeader==Nominacja Imię i nazwisko
+adminDescriptionBookedAppointmentsTableHeader==Opis
+adminRateBookedAppointmentsTableHeader==Stawka
+adminDeleteBookedAppointmentsTableHeader==Skreślić
+adminDeleteBookedAppointmentsTableButton==Skreślić
+adminNoBookedAppointmentsTablePlaceholder==Masz 0 zarezerwowanych spotkań na dzisiaj
+adminAllBookedAppointmentsHeader==Wszystkie: Rezerwowane spotkania przez klientów
+adminDateAllBookedAppointmentsTableHeader==Data
+adminClientnameAllBookedAppointmentsTableHeader==Nazwa klienta
+adminClientemailAllBookedAppointmentsTableHeader==Klient Email
+adminClienttelephoneAllBookedAppointmentsTableHeader==Telefon klienta
+adminAppointmentnameAllBookedAppointmentsTableHeader==Nominacja Imię i nazwisko
+adminDescriptionAllBookedAppointmentsTableHeader==Opis
+adminRateAllBookedAppointmentsTableHeader==Stawka
+adminDeleteAllBookedAppointmentsTableHeader==Skreślić
+adminDeleteAllBookedAppointmentsTableButton==Skreślić
+adminNoAllBookedAppointmentsTablePlaceholder==Twoi klienci nie mają zarezerwowanych spotkań. 
+adminCurrencySettingHeader==Wybierz walutę:
+adminCurrencySettingButton==OK
+adminloginWrongPasswordSnackbar==Podaj swój prawidłowy adres e-mail i hasło do swojego konta administratora!
+adminloginLoginFailedSnackbar==LOGIN BŁĘDNY. Wpisz poprawny adres e-mail i hasło do swojego konta administratora.
+adminloginSiteHeader==Zaloguj się do konta admin
+adminloginFormEmail==Email:
+adminloginFormEmailPlaceholder==Wprowadź Email
+adminloginFormPassword==Hasło:
+adminloginFormPasswordPlaceholder==Wprowadź hasło
+adminloginFormLoginButton==Login
+adminloginNoAdminAccountCreatedText==MUSISZ ZAREJESTROWAĆ KONTO ADMINISTRATORA PRZED UŻYCIEM TEJ APLIKACJI DO UŻYTKU PRODUKCYJNEGO:
+adminloginRegisterLink==Zarejestruj się
+adminregisterSiteheader==Zarejestruj konto administratora
+adminregisterEmptyFieldSnackbar==Proszę prawidłowo wypełnić wszystkie wymagane pola!
+adminregisterPasswordNotSameSnackbar==Hasło i potwierdzenie hasła muszą być takie same!
+adminregisterPasswordTooShortSnackbar==Hasło musi mieć długość co najmniej 6 znaków!
+adminregisterRegistrationSuccessSnackbar==OK. Rejestracja została zakończona. Zaloguj się teraz za pomocą danych uwierzytelniających twoje konto.
+adminregisterRegistrationFailedSnackbar==Rejestracja nie powiodła się! Proszę prawidłowo wypełnić wszystkie wymagane pola.
+adminregisterSitesubheader==Możesz zarejestrować tylko jedno konto administratora, które może być używane do przeglądania Twojego agenta/admin.
+adminregisterAdminAccountCreated==Konto administratora jest już zarejestrowane. Proszę użyć danych konta administratora, aby się zalogować.
+adminregisterFormName==Nazwa
+adminregisterFormNamePlaceholder==Wprowadź nazwę
+adminregisterFormEmail==Email
+adminregisterFormEmailPlaceholder==Wprowadź Email
+adminregisterFormPassword==Hasło:
+adminregisterFormPasswordPlaceholder==Wprowadź hasło
+adminregisterFormPasswordconfirmation==Potwierdzić hasło:
+adminregisterFormPasswordconfirmationPlaceholder==Wprowadź ponownie Hasło
+adminregisterFormTelephone==Telefon (opcjonalnie):
+adminregisterFormTelephonePlaceholder==Wprowadź numer telefonu
+adminregisterFormNote==Uwaga (opcjonalnie):
+adminregisterFormNotePlaceholder==Uwaga nieobowiązkowa
+adminregisterFormRegisterButton==Rejestr
+adminregisterLoginInfo==Masz konto administratora?
+adminregisterLoginLink==Zaloguj się
+bookSiteHeader==Zarezerwuj to spotkanie
+bookSiteSubheader==Kliknij na przycisk poniżej, aby zapłacić i zarezerwować następujące spotkanie:
+bookTableTimedateHeader==Czas - Data:
+bookTableNameHeader==Imię i nazwisko:
+bookTableDescriptionHeader==Opis:
+bookTableRateHeader==Stawka:
+bookBookButtonAlt==Sprawdź w systemie PayPal
+bookBookButtonText==Książka
+contactSiteHeader==Kontakt
+contactSiteSubHeader==Dane kontaktowe
+createSiteHeader==Dodaj nową nominację
+createRateErrorSnackbar==BŁĄD: Twoja stawka musi mieć wartość co najmniej 1 (>=1)
+createSuccessSnackbar==Nowa nominacja została dodana
+createFormTImeoftheappointmentColumnPlaceholder==Czas
+createFormDateoftheappointmentColumnHeader==Data wyznaczenia
+createFormDateoftheappointmentColumnPlaceholder==Data wyznaczenia
+createFormNameColumnHeader==Tytuł nominacji
+createFormNameColumnPlaceholder==Tytuł nominacji
+createFormDescriptionColumnHeader==Opis powołania
+createFormDescriptionColumnPlaceholder==Opis nominacji
+createFormRateColumnPlaceholder==Stawka (Cena) - Domyślnie: 1 _%_
+createFormSaveButton==Zapisz nominację
+createFormBackButton==Z powrotem
+editSiteHeader==Spotkanie redakcyjne
+editSuccessSnackbar==Nominacja została pomyślnie zaktualizowana!
+editFormTimeoftheappointmentColumnPlaceholder==Czas
+editFormDateoftheappointmentColumnHeader==Data wyznaczenia
+editFormDateoftheappointmentColumnPlaceholder==Data wyznaczenia
+editFormNameColumnHeader==Tytuł nominacji
+editFormDescriptionColumnHeader==Opis powołania
+editFormRateColumnHeader==Stawka (Cena) - Domyślnie: 1 _%_
+editFormSaveButton==Zapisz nominację
+editFormBackButton==Z powrotem
+generalnoticeSiteHeader==Uwaga ogólna
+listAddnewappointmentButton==Dodaj nową nominację
+listDeleteAppointmentSuccess==Nominacja została skutecznie usunięta!
+listAdmindashboardButton==Admin Dashboard
+listTableDateHeader==Data
+listTableAppointmentNameHeader==Nominacja Imię i nazwisko
+listTableDescriptionHeader==Opis
+listTableRateHeader==Stawka
+listTableBooknowHeader==Książka teraz
+listTableBooknowButton==Książka
+listTableEditdeleteHeader==Edytuj / Usuń
+listTableEditButton==Edycja
+listTableDeleteButton==Skreślić
+listNoAppointments==W tej chwili nie ma wolnych terminów. Proszę wrócić później.
+paymentcancelSiteHeader==Płatność została anulowana
+paymentcancelSiteSubtext==Twoja wizyta nie była zarezerwowana.
+paymentsucessSiteHeader==Płatność była udana
+paymentsucessSiteSubtext==Twoja wizyta (id: _%_) została pomyślnie zarezerwowana.
+paymentsucessDatetimeHeader==Czas - Data:
+paymentsucessNameHeader==Nazwisko:
+paymentsucessDescriptionHeader==Opis:
+paymentsucessRateHeader==Stawka:
+paymentsucessBackButton==Wróć
+paymentsucessPrintButton==Drukuj
+privacypolicySiteHeader==Polityka prywatności
+processpaymentSiteHeader==Płatność procesowa...
+settingsSiteHeader==Ustawienia
+settingsCurrencyDescription==Waluta
+settingsCurrencyInfo==Informacja: Waluta nie może być zmieniona dla już istniejących spotkań.  
+settingsButtonSave==Zapisz
+settingsButtonBack==Z powrotem
+settingsSuccessSnackbar==OK. Ustawienia zostały pomyślnie zapisane.
+settingsFailedSnackbar==Błąd. Ustawienia nie mogły zostać zapisane. 

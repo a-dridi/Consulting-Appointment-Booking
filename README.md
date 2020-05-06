@@ -1,6 +1,7 @@
 # Consulting Appointment Booking
 
 A web app (MEAN stack) to administrate and book consulting appointments.
+Note: This is a Public version. Customized versions and production versions are available per request.
 
 ![Screenshot of application](https://raw.githubusercontent.com/a-dridi/Consulting-Appointment-Booking/master/screenshot.PNG)
 
@@ -20,11 +21,15 @@ https://youtu.be/EWYUoETQnEw
 * Admin can edit, delete or add appointments which can be booked by clients
 * Client information are saved when the client paid through Paypal
 * Admin dashboard that shows you the appointments for the current day with client information (name, email, etc.)
+* Admin can adjust app easily through the settings page
 
 ## Configuration
-
 Please adjust the file "server.js" in the folder "backend" to your server settings. 
 NOTICE: Please set your domain names in the cors section (line number 40) in the file "server.js".
+
+## Translation
+If your language is missing, then you can also add a translation. Please go to the folder "translation" and use the file "en.txt" as an example.
+Thank you for your support. 
 
 
 ## API
@@ -107,7 +112,7 @@ To start the application directly. You need to have NodeJS and MongoDB installed
 bin/mongod.exe
 ```
 
-**Start backend server:**
+**Start backend server (node_modules must have been created by command "npm install"):**
 ```
 cd backend
 ```

@@ -20,7 +20,11 @@ let AvailableAppointment = new Schema(
         rate: {
             type: Number,
             default: 0
-        }
+        },
+        currency: {
+            type: String,
+            default: "$ (USD)"
+        },
     }
 );
 

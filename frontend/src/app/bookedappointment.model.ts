@@ -4,5 +4,6 @@ export interface BookedAppointment {
     name: String;
     description: String;
     rate: Number;
+    currency: String;
     clientId: String;
 }

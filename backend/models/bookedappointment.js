@@ -21,6 +21,10 @@ let BookedAppointment = new Schema({
         type: Number,
         default: 0
     },
+    currency: {
+        type: String,
+        default: "$ (USD)"
+    },
     clientId: {
         type: mongoose.Schema.ObjectId,
         required: [true, "Please add ObjectID _id of Client"]

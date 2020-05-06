@@ -1,59 +1,63 @@
 <div>
-    <h2 style="text-align: center; margin-top: 10px;">Hello {{username}}</h2>
-    <h3 style="text-align: center">Today: You have {{bookedAppointmentClientsToday.length}} booked appointment(s) for today</h3>
+    <h2 style="text-align: center; margin-top: 10px;">{{uiString.get("adminGreeting").replace("_%_",""+username)}}</h2>
+    <h3 style="text-align: center">{{uiString.get("adminHeaderAppointmentsToday").replace("_%_",""+this.bookedAppointmentClientsToday.length)}} </h3>
     <mat-card class="container-dashboard-main">
         <button mat-raised-button color="orange" routerLink="/allappointments">
-            <mat-icon aria-label="Assignment icon">assignment</mat-icon> All created appointments
+            <mat-icon aria-label="Assignment icon">assignment</mat-icon> {{uiString.get("adminAllCreatedAppointmentsButton")}}
         </button>
         <button mat-raised-button color="orange" routerLink="/create" style="margin-left: 15px">
-            <mat-icon aria-label="Add icon">add</mat-icon> Create new appointments
+            <mat-icon aria-label="Add icon">add</mat-icon> {{uiString.get("adminCreatenewappointmentsButton")}}
+        </button>
+        <button mat-raised-button color="orange" routerLink="/settings" style="margin-left: 15px">
+            <mat-icon aria-label="Settings applications icon">settings_applications</mat-icon> {{uiString.get("adminSettingsButton")}}
         </button>
         <br>
         <br>
         <mat-divider></mat-divider>
         <br>
-        <h4 style="font-weight: bold;">Today: Booked appointments by clients</h4>
+        <h4 style="font-weight: bold;">{{uiString.get("adminTodayBookedAppointmentsHeader")}}</h4>
         <table mat-table [dataSource]="bookedAppointmentClientsToday" class="todayBookedAppointments">
             <ng-container matColumnDef="date">
-                <th mat-header-cell *matHeaderCellDef class="main-column-appointment">Date</th>
+                <th mat-header-cell *matHeaderCellDef class="main-column-appointment">{{uiString.get("adminDateBookedAppointmentsTableHeader")}}
+                </th>
                 <td mat-cell *matCellDef="let element" class="main-column-appointment">
                     {{element.date | date : "dd.MM.yyyy HH:mm"}}
                 </td>
             </ng-container>
 
             <ng-constainer matColumnDef="clientname">
-                <th mat-header-cell *matHeaderCellDef>Client Name</th>
+                <th mat-header-cell *matHeaderCellDef>{{uiString.get("adminClientnameBookedAppointmentsTableHeader")}}</th>
                 <td mat-cell *matCellDef="let element">
                     {{element.clientdetails[0].forename + " " + element.clientdetails[0].surname.toUpperCase()}}</td>
             </ng-constainer>
 
             <ng-constainer matColumnDef="clientemail">
-                <th mat-header-cell *matHeaderCellDef>Client Email</th>
+                <th mat-header-cell *matHeaderCellDef>{{uiString.get("adminClientemailBookedAppointmentsTableHeader")}}</th>
                 <td mat-cell *matCellDef="let element"> {{element.clientdetails[0].email}} </td>
             </ng-constainer>
 
             <ng-constainer matColumnDef="clienttelephone">
-                <th mat-header-cell *matHeaderCellDef>Client Telephone</th>
+                <th mat-header-cell *matHeaderCellDef>{{uiString.get("adminClientTelephoneBookedAppointmentsTableHeader")}}</th>
                 <td mat-cell *matCellDef="let element"> {{element.clientdetails[0].telephone}} </td>
             </ng-constainer>
 
             <ng-container matColumnDef="name">
-                <th mat-header-cell *matHeaderCellDef>Appointment Name</th>
+                <th mat-header-cell *matHeaderCellDef>{{uiString.get("adminAppointmentNameBookedAppointmentsTableHeader")}}</th>
                 <td mat-cell *matCellDef="let element"> {{element.name}}</td>
             </ng-container>
             <ng-container matColumnDef="description">
-                <th mat-header-cell *matHeaderCellDef>Description</th>
+                <th mat-header-cell *matHeaderCellDef>{{uiString.get("adminDescriptionBookedAppointmentsTableHeader")}}</th>
                 <td mat-cell *matCellDef="let element"> {{element.description}}</td>
             </ng-container>
             <ng-container matColumnDef="rate">
-                <th mat-header-cell *matHeaderCellDef>Rate in $ (USD)</th>
-                <td mat-cell *matCellDef="let element"> {{element.rate}}</td>
+                <th mat-header-cell *matHeaderCellDef>{{uiString.get("adminRateBookedAppointmentsTableHeader")}}</th>
+                <td mat-cell *matCellDef="let element"> {{element.rate}} {{element.currency || defaultCurrency}}</td>
             </ng-container>
 
             <ng-container matColumnDef="delete">
-                <th mat-header-cell *matHeaderCellDef class="mat-column-right">Delete</th>
+                <th mat-header-cell *matHeaderCellDef class="mat-column-right">{{uiString.get("adminDeleteBookedAppointmentsTableHeader")}}</th>
                 <td mat-cell *matCellDef="let element" class="mat-column-right">
-                    <button mat-button color="warn" (click)="deleteBookedAppointment(element._id)">Delete</button>
+                    <button mat-button color="warn" (click)="deleteBookedAppointment(element._id)">{{uiString.get("adminDeleteBookedAppointmentsTableButton")}}</button>
                 </td>
             </ng-container>
 
@@ -61,53 +65,53 @@
             <tr mat-row *matRowDef="let row; columns: bookedAppointmentClientsColumn;"></tr>
         </table>
         <div *ngIf="bookedAppointmentClientsToday.length < 1">
-            <h4 style="text-align: center; margin-top: 10px;">You have 0 booked appointment(s) for today </h4>
+            <h4 style="text-align: center; margin-top: 10px;">{{uiString.get("adminNoBookedAppointmentsTablePlaceholder")}} </h4>
         </div>
         <br>
         <mat-divider></mat-divider>
         <br>
-        <h4>All: Booked appointments by clients</h4>
+        <h4>{{uiString.get("adminAllBookedAppointmentsHeader")}}</h4>
         <table mat-table [dataSource]="bookedAppointmentClients">
             <ng-container matColumnDef="date">
-                <th mat-header-cell *matHeaderCellDef class="main-column-appointment">Date</th>
+                <th mat-header-cell *matHeaderCellDef class="main-column-appointment">{{uiString.get("adminDateAllBookedAppointmentsTableHeader")}}</th>
                 <td mat-cell *matCellDef="let element" class="main-column-appointment">
                     {{element.date | date : "dd.MM.yyyy HH:mm"}}
                 </td>
             </ng-container>
 
             <ng-constainer matColumnDef="clientname">
-                <th mat-header-cell *matHeaderCellDef>Client Name</th>
+                <th mat-header-cell *matHeaderCellDef>{{uiString.get("adminClientnameAllBookedAppointmentsTableHeader")}}</th>
                 <td mat-cell *matCellDef="let element">
                     {{element.clientdetails[0].forename + " " + element.clientdetails[0].surname.toUpperCase()}}</td>
             </ng-constainer>
 
             <ng-constainer matColumnDef="clientemail">
-                <th mat-header-cell *matHeaderCellDef>Client Email</th>
+                <th mat-header-cell *matHeaderCellDef>{{uiString.get("adminClientemailAllBookedAppointmentsTableHeader")}}</th>
                 <td mat-cell *matCellDef="let element"> {{element.clientdetails[0].email}} </td>
             </ng-constainer>
 
             <ng-constainer matColumnDef="clienttelephone">
-                <th mat-header-cell *matHeaderCellDef>Client Telephone</th>
+                <th mat-header-cell *matHeaderCellDef>{{uiString.get("adminClienttelephoneAllBookedAppointmentsTableHeader")}}</th>
                 <td mat-cell *matCellDef="let element"> {{element.clientdetails[0].telephone}} </td>
             </ng-constainer>
 
             <ng-container matColumnDef="name">
-                <th mat-header-cell *matHeaderCellDef>Appointment Name</th>
+                <th mat-header-cell *matHeaderCellDef>{{uiString.get("adminAppointmentnameAllBookedAppointmentsTableHeader")}}</th>
                 <td mat-cell *matCellDef="let element"> {{element.name}}</td>
             </ng-container>
             <ng-container matColumnDef="description">
-                <th mat-header-cell *matHeaderCellDef>Description</th>
+                <th mat-header-cell *matHeaderCellDef>{{uiString.get("adminDescriptionAllBookedAppointmentsTableHeader")}}</th>
                 <td mat-cell *matCellDef="let element"> {{element.description}}</td>
             </ng-container>
             <ng-container matColumnDef="rate">
-                <th mat-header-cell *matHeaderCellDef>Rate in $ (USD)</th>
-                <td mat-cell *matCellDef="let element"> {{element.rate}}</td>
+                <th mat-header-cell *matHeaderCellDef>{{uiString.get("adminRateAllBookedAppointmentsTableHeader")}}</th>
+                <td mat-cell *matCellDef="let element"> {{element.rate}} {{element.currency || defaultCurrency}}</td>
             </ng-container>
 
             <ng-container matColumnDef="delete">
-                <th mat-header-cell *matHeaderCellDef class="mat-column-right">Delete</th>
+                <th mat-header-cell *matHeaderCellDef class="mat-column-right">{{uiString.get("adminDeleteAllBookedAppointmentsTableHeader")}}</th>
                 <td mat-cell *matCellDef="let element" class="mat-column-right">
-                    <button mat-button color="warn" (click)="deleteBookedAppointment(element._id)">Delete</button>
+                    <button mat-button color="warn" (click)="deleteBookedAppointment(element._id)">{{uiString.get("adminDeleteAllBookedAppointmentsTableButton")}}</button>
                 </td>
             </ng-container>
 
@@ -116,7 +120,7 @@
 
         </table>
         <div *ngIf="noBookedAppointments">
-            <h4 style="text-align: center; margin-top: 10px;">There are no booked appointments by your clients. </h4>
+            <h4 style="text-align: center; margin-top: 10px;">{{uiString.get("adminNoAllBookedAppointmentsTablePlaceholder")}} </h4>
         </div>
     </mat-card>
 </div>

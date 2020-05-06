@@ -1,0 +1,135 @@
+ru
+appAgentSectionMenutitle==Раздел агент/администратор
+appLogoutButtonMenutitle==Выход из системы
+appGeneralnoticeFootertitle==Общее уведомление
+appPrivacypolicyFootertitle==Политика конфиденциальности
+appContactFootertitle==Контактная информация
+adminSuccessSnackbar==Заказанное назначение успешно удалено!
+adminGreeting==Здравствуйте _%_
+adminHeaderAppointmentsToday==Сегодня: У тебя назначена встреча на сегодня.
+adminAllCreatedAppointmentsButton==Все созданные назначения
+adminCreatenewappointmentsButton==Создать новые встречи
+adminSettingsButton==Настройки
+adminTodayBookedAppointmentsHeader==Сегодня: Заказанные клиентом встречи
+adminDateBookedAppointmentsTableHeader==Дата
+adminClientnameBookedAppointmentsTableHeader==Имя клиента
+adminClientemailBookedAppointmentsTableHeader==Электронная почта клиента
+adminClientTelephoneBookedAppointmentsTableHeader==Телефон-клиент
+adminAppointmentNameBookedAppointmentsTableHeader==Назначение Имя
+adminDescriptionBookedAppointmentsTableHeader==Описание
+adminRateBookedAppointmentsTableHeader==Тариф
+adminDeleteBookedAppointmentsTableHeader==Удалить
+adminDeleteBookedAppointmentsTableButton==Удалить
+adminNoBookedAppointmentsTablePlaceholder==У вас 0 забронированных встреч на сегодня
+adminAllBookedAppointmentsHeader==Все: Заказанные клиентом встречи
+adminDateAllBookedAppointmentsTableHeader==Дата
+adminClientnameAllBookedAppointmentsTableHeader==Имя клиента
+adminClientemailAllBookedAppointmentsTableHeader==Электронная почта клиента
+adminClienttelephoneAllBookedAppointmentsTableHeader==Телефон-клиент
+adminAppointmentnameAllBookedAppointmentsTableHeader==Назначение Имя
+adminDescriptionAllBookedAppointmentsTableHeader==Описание
+adminRateAllBookedAppointmentsTableHeader==Тариф
+adminDeleteAllBookedAppointmentsTableHeader==Удалить
+adminDeleteAllBookedAppointmentsTableButton==Удалить
+adminNoAllBookedAppointmentsTablePlaceholder==Нет никаких забронированных встреч с вашими клиентами. 
+adminCurrencySettingHeader==Выберите валюту:
+adminCurrencySettingButton==OK
+adminloginWrongPasswordSnackbar==Пожалуйста, введите правильный адрес электронной почты и пароль учетной записи администратора!
+adminloginLoginFailedSnackbar==ЗАПИСЬ ЗАПРЕЩЕНАЕТСЯ. Пожалуйста, введите правильный адрес электронной почты и пароль учетной записи администратора.
+adminloginSiteHeader==Вход администратора
+adminloginFormEmail==Электронная почта:
+adminloginFormEmailPlaceholder==Введите адрес электронной почты
+adminloginFormPassword==Пароль:
+adminloginFormPasswordPlaceholder==Введите пароль
+adminloginFormLoginButton==Вход
+adminloginNoAdminAccountCreatedText==ВЫ ДОЛЖНЫ ЗАРЕГИСТРИРОВАТЬ УЧЕТНУЮ ЗАПИСЬ АДМИНИСТРАТОРА, ПРЕЖДЕ ЧЕМ ИСПОЛЬЗОВАТЬ ЭТО ПРИЛОЖЕНИЕ В ПРОИЗВОДСТВЕННЫХ ЦЕЛЯХ:
+adminloginRegisterLink==Зарегистрироваться
+adminregisterSiteheader==Регистрация администратора
+adminregisterEmptyFieldSnackbar==Пожалуйста, правильно введите все необходимые поля!
+adminregisterPasswordNotSameSnackbar==Пароль и подтверждение пароля должны быть одинаковыми!
+adminregisterPasswordTooShortSnackbar==Пароль должен состоять не менее чем из 6 символов!
+adminregisterRegistrationSuccessSnackbar==ХОРОШО. Регистрация завершена. Пожалуйста, войдите в систему с учетными записями.
+adminregisterRegistrationFailedSnackbar==Регистрация не прошла! Пожалуйста, введите все необходимые поля правильно.
+adminregisterSitesubheader==Вы можете зарегистрировать только одну учетную запись администратора, которая может быть использована для просмотра панели управления агентами/администраторами.
+adminregisterAdminAccountCreated==Учетная запись администратора уже зарегистрирована. Пожалуйста, используйте учетные данные администратора для входа в систему.
+adminregisterFormName==Имя
+adminregisterFormNamePlaceholder==Введите имя
+adminregisterFormEmail==Email
+adminregisterFormEmailPlaceholder==Введите адрес электронной почты
+adminregisterFormPassword==Пароль:
+adminregisterFormPasswordPlaceholder==Введите пароль
+adminregisterFormPasswordconfirmation==Подтвердите пароль:
+adminregisterFormPasswordconfirmationPlaceholder==Введите пароль еще раз
+adminregisterFormTelephone==Телефон (опционально):
+adminregisterFormTelephonePlaceholder==Введите номер телефона
+adminregisterFormNote==Примечание (необязательно):
+adminregisterFormNotePlaceholder==Дополнительное примечание
+adminregisterFormRegisterButton==Зарегистрироваться
+adminregisterLoginInfo==У вас есть учетная запись администратора?
+adminregisterLoginLink==Войдите на сайт
+bookSiteHeader==Закажите эту встречу
+bookSiteSubheader==Нажмите на кнопку ниже, чтобы оплатить и забронировать следующую встречу:
+bookTableTimedateHeader==Время - Дата:
+bookTableNameHeader==Имя:
+bookTableDescriptionHeader==Описание:
+bookTableRateHeader==Тариф:
+bookBookButtonAlt==Оформить заказ через PayPal
+bookBookButtonText==Книга
+contactSiteHeader==Контактная информация
+contactSiteSubHeader==Контактные данные
+createSiteHeader==Добавить новое назначение
+createRateErrorSnackbar==ОШИБКА: Ваша ставка должна иметь значение не менее 1 (>=1).
+createSuccessSnackbar==Добавлено новое назначение
+createFormTImeoftheappointmentColumnPlaceholder==Время
+createFormDateoftheappointmentColumnHeader==Дата назначения
+createFormDateoftheappointmentColumnPlaceholder==Дата назначения
+createFormNameColumnHeader==Название встречи
+createFormNameColumnPlaceholder==Назначение название
+createFormDescriptionColumnHeader==Описание назначения
+createFormDescriptionColumnPlaceholder==Назначение Описание
+createFormRateColumnPlaceholder==Ставка (Цена) - По умолчанию: 1 _%_.
+createFormSaveButton==Сохранить встречу
+createFormBackButton==Назад
+editSiteHeader==Назначение редактора
+editSuccessSnackbar==Назначение было успешно обновлено!
+editFormTimeoftheappointmentColumnPlaceholder==Время
+editFormDateoftheappointmentColumnHeader==Дата назначения
+editFormDateoftheappointmentColumnPlaceholder==Дата назначения
+editFormNameColumnHeader==Название встречи
+editFormDescriptionColumnHeader==Описание назначения
+editFormRateColumnHeader==Ставка (Цена) - По умолчанию: 1 _%_.
+editFormSaveButton==Сохранить встречу
+editFormBackButton==Назад
+generalnoticeSiteHeader==Общее уведомление
+listAddnewappointmentButton==Добавить новое назначение
+listDeleteAppointmentSuccess==Назначение удалено успешно!
+listAdmindashboardButton==Приборная панель администрирования
+listTableDateHeader==Дата
+listTableAppointmentNameHeader==Назначение Имя
+listTableDescriptionHeader==Описание
+listTableRateHeader==Тариф
+listTableBooknowHeader==Забронировать сейчас
+listTableBooknowButton==Книга
+listTableEditdeleteHeader==Редактирование/Удаление
+listTableEditButton==Редактирование
+listTableDeleteButton==Удалить
+listNoAppointments==На данный момент нет свободных назначений. Пожалуйста, приходите позже.
+paymentcancelSiteHeader==Оплата была отменена
+paymentcancelSiteSubtext==Ваша встреча не была назначена.
+paymentsucessSiteHeader==Оплата прошла успешно
+paymentsucessSiteSubtext==Ваша встреча (id: _%_) была успешно забронирована.
+paymentsucessDatetimeHeader==Время - Дата:
+paymentsucessNameHeader==Имя:
+paymentsucessDescriptionHeader==Описание:
+paymentsucessRateHeader==Тариф:
+paymentsucessBackButton==Назад
+paymentsucessPrintButton==Печать
+privacypolicySiteHeader==Политика конфиденциальности
+processpaymentSiteHeader==Обработка платежа...
+settingsSiteHeader==Настройки
+settingsCurrencyDescription==Валюта
+settingsCurrencyInfo==Информация: Валюта не может быть изменена для уже существующих назначений.  
+settingsButtonSave==Сохранить
+settingsButtonBack==Назад
+settingsSuccessSnackbar==ХОРОШО. Настройки успешно сохранены
+settingsFailedSnackbar==Ошибка. Настройки не удалось сохранить. 

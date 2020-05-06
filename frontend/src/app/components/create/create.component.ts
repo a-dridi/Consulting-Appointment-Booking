@@ -3,6 +3,8 @@ import { AppointmentService } from '../../appointment.service';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { AppComponent } from 'src/app/app.component';
+import { AppSettings } from 'src/app/appsettings.model';
 
 
 @Component({
@@ -11,12 +13,27 @@ import { MatSnackBar } from '@angular/material/snack-bar';
   styleUrls: ['./create.component.css']
 })
 export class CreateComponent implements OnInit {
-
+  public uiString: Map<String, String>;
   createForm: FormGroup;
   selectedHour: string;
   selectedMinute: string;
+  timePlaceholder: String;
+  datePlaceholder: String;
+  namePlaceholder: String;
+  descriptionPlaceholder: String;
+  ratePlaceholder: String;
+
+  public appsettings: AppSettings[] = [];
+  public selectedCurrency: String; 
 
   constructor(private appointmentService: AppointmentService, private appointmentForm: FormBuilder, private router: Router, private snackBar: MatSnackBar) {
+    this.loadAppSettings();
+    this.uiString = AppComponent.uiStringFinal;
+    this.timePlaceholder = this.uiString.get("createFormTImeoftheappointmentColumnPlaceholder");
+    this.datePlaceholder = this.uiString.get("createFormDateoftheappointmentColumnPlaceholder");
+    this.namePlaceholder = this.uiString.get("createFormNameColumnPlaceholder");
+    this.descriptionPlaceholder = this.uiString.get("createFormDescriptionColumnPlaceholder");
+
     this.createForm = this.appointmentForm.group({
       date: [''],
       name: ['', Validators.required],
@@ -53,19 +70,19 @@ export class CreateComponent implements OnInit {
     if (rate != null && rate !== "") {
       let parsedRate = (parseFloat(rate));
       if (parsedRate >= 1) {
-        this.appointmentService.addAppointment(date, name, description, parsedRate.toFixed(2)).subscribe(() => {
+        this.appointmentService.addAppointment(date, name, description, parsedRate.toFixed(2), this.selectedCurrency).subscribe(() => {
           this.router.navigate(['/allappointments']);
         });
       } else {
-        this.snackBar.open("ERROR: Your rate must have a value of at least 1 (>=1)", "OK", {
+        this.snackBar.open("" + this.uiString.get("createRateErrorSnackbar"), "OK", {
           duration: 4000
         });
 
       }
     } else {
-      this.appointmentService.addAppointment(date, name, description, 1.00).subscribe(() => {
+      this.appointmentService.addAppointment(date, name, description, 1.00, this.selectedCurrency).subscribe(() => {
         this.router.navigate(['/allappointments']);
-        this.snackBar.open("New appointment was added", "OK", {
+        this.snackBar.open("" + this.uiString.get("createSuccessSnackbar"), "OK", {
           duration: 4000
         });
       });
@@ -79,5 +96,25 @@ export class CreateComponent implements OnInit {
       this.selectedMinute = timeSplitted[1];
     }
   }
+
+  loadAppSettings() {
+    this.appointmentService.getAllAppSettings()
+      .subscribe((data: AppSettings[]) => {
+          this.appsettings = data;
+          this.setUsedSettings(data);
+      })
+  }
+
+  setUsedSettings(appSettings){
+    appSettings.forEach(element => {
+      if(element.code === "defaultCurrency"){
+        this.selectedCurrency = element.value;
+      }
+    });
+    this.ratePlaceholder = this.uiString.get("createFormRateColumnPlaceholder").replace("_%_",""+this.selectedCurrency);
+
+  }
+  
+  
 
 }

@@ -5,6 +5,8 @@ import { BookedAppointment } from '../../bookedappointment.model'
 import { BookedAppointmentView } from 'src/app/bookedappointmentview.model';
 import { Client } from 'src/app/client.model';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { AppComponent } from 'src/app/app.component';
+import { AppSettings } from 'src/app/appsettings.model';
 
 @Component({
   selector: 'app-admin',
@@ -12,7 +14,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
   styleUrls: ['./admin.component.css']
 })
 export class AdminComponent implements OnInit {
-
+  public uiString: Map<String, String>;
   username: String = '';
   noBookedAppointments: Boolean = true;
   bookedAppointment: BookedAppointment[];
@@ -20,7 +22,12 @@ export class AdminComponent implements OnInit {
   bookedAppointmentClientsToday: BookedAppointmentView[] = [];
   bookedAppointmentClientsColumn = ['date', 'clientname', 'clientemail', 'clienttelephone', 'name', 'description', 'rate', 'delete'];
   elementClient: any = {};
+  public appsettings: AppSettings[] = [];
+  public defaultCurrency: String = '$ (USD)';
+
   constructor(private appointmentService: AppointmentService, private router: Router, private snackBar: MatSnackBar) {
+    this.uiString = AppComponent.uiStringFinal;
+
     appointmentService.checkAdminAuthentication()
       .subscribe(
         data => {
@@ -73,10 +80,12 @@ export class AdminComponent implements OnInit {
   deleteBookedAppointment(id) {
     this.appointmentService.deleteBookedAppointment(id).subscribe(() => {
       this.loadBookedAppointments();
-      this.snackBar.open("Booked Appointment was deleted successfully!", "OK", {
+      this.snackBar.open("" + this.uiString.get("adminSuccessSnackbar"), "OK", {
         duration: 4000
       });
     });
   }
+
+
 
 }

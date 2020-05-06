@@ -25,4 +25,5 @@ let AdminAccount = new Schema({
     }
 });
 
-export default mongoose.model("AdminAccount", AdminAccount);
+//export default mongoose.model("AdminAccount", AdminAccount);
+module.exports = mongoose.models.AdminAccount || mongoose.model('AdminAccount', AdminAccount);

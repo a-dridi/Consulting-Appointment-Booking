@@ -1,0 +1,135 @@
+fr
+appAgentSectionMenutitle==Agent / Section Admin
+appLogoutButtonMenutitle==Déconnexion
+appGeneralnoticeFootertitle==Avis général
+appPrivacypolicyFootertitle==Politique de confidentialité
+appContactFootertitle==Contactez
+adminSuccessSnackbar==Rendez-vous pris a été supprimé avec succès !
+adminGreeting==Bonjour _%_.
+adminHeaderAppointmentsToday==Aujourd'hui : Vous avez _%_ réservé des rendez-vous pour aujourd'hui
+adminAllCreatedAppointmentsButton==Tous les rendez-vous créés
+adminCreatenewappointmentsButton==Créer de nouvelles nominations
+adminSettingsButton==Paramètres
+adminTodayBookedAppointmentsHeader==Aujourd'hui : Rendez-vous pris par les clients
+adminDateBookedAppointmentsTableHeader==Date
+adminClientnameBookedAppointmentsTableHeader==Nom du client
+adminClientemailBookedAppointmentsTableHeader==Courriel du client
+adminClientTelephoneBookedAppointmentsTableHeader==Téléphone du client
+adminAppointmentNameBookedAppointmentsTableHeader==Nom de la nomination
+adminDescriptionBookedAppointmentsTableHeader==Description
+adminRateBookedAppointmentsTableHeader==Tarifs
+adminDeleteBookedAppointmentsTableHeader==Supprimer
+adminDeleteBookedAppointmentsTableButton==Supprimer
+adminNoBookedAppointmentsTablePlaceholder==Vous avez 0 rendez-vous réservés pour aujourd'hui
+adminAllBookedAppointmentsHeader==Tous : Rendez-vous pris par les clients
+adminDateAllBookedAppointmentsTableHeader==Date
+adminClientnameAllBookedAppointmentsTableHeader==Nom du client
+adminClientemailAllBookedAppointmentsTableHeader==Courriel du client
+adminClienttelephoneAllBookedAppointmentsTableHeader==Téléphone du client
+adminAppointmentnameAllBookedAppointmentsTableHeader==Nom de la nomination
+adminDescriptionAllBookedAppointmentsTableHeader==Description
+adminRateAllBookedAppointmentsTableHeader==Tarifs
+adminDeleteAllBookedAppointmentsTableHeader==Supprimer
+adminDeleteAllBookedAppointmentsTableButton==Supprimer
+adminNoAllBookedAppointmentsTablePlaceholder==Vos clients ne prennent pas de rendez-vous. 
+adminCurrencySettingHeader==Sélectionnez une devise :
+adminCurrencySettingButton==OK
+adminloginWrongPasswordSnackbar==Veuillez entrer votre adresse électronique et le mot de passe de votre compte admin !
+adminloginLoginFailedSnackbar==LOGIN FAILED. Veuillez entrer votre adresse électronique et le mot de passe de votre compte administrateur.
+adminloginSiteHeader==Connexion admin
+adminloginFormEmail==Courrier électronique :
+adminloginFormEmailPlaceholder==Entrez l'adresse électronique
+adminloginFormPassword==Mot de passe :
+adminloginFormPasswordPlaceholder==Entrez le mot de passe
+adminloginFormLoginButton==Connexion
+adminloginNoAdminAccountCreatedText==VOUS DEVEZ ENREGISTRER UN COMPTE ADMIN AVANT D'UTILISER CETTE APPLICATION À DES FINS DE PRODUCTION :
+adminloginRegisterLink==S'inscrire
+adminregisterSiteheader==Enregistrer le compte administratif
+adminregisterEmptyFieldSnackbar==Veuillez remplir correctement tous les champs obligatoires !
+adminregisterPasswordNotSameSnackbar==Le mot de passe et la confirmation du mot de passe doivent être identiques !
+adminregisterPasswordTooShortSnackbar==Le mot de passe doit comporter au moins 6 caractères !
+adminregisterRegistrationSuccessSnackbar==OK. L'enregistrement est terminé. Veuillez vous connecter avec vos identifiants de compte maintenant.
+adminregisterRegistrationFailedSnackbar==L'enregistrement a échoué ! Veuillez saisir correctement tous les champs obligatoires.
+adminregisterSitesubheader==Vous ne pouvez enregistrer qu'un seul compte admin, qui peut être utilisé pour visualiser votre tableau de bord agent/admin.
+adminregisterAdminAccountCreated==Le compte administrateur est déjà enregistré. Veuillez utiliser les informations d'identification de votre compte administrateur pour vous connecter.
+adminregisterFormName==Nom
+adminregisterFormNamePlaceholder==Entrez le nom
+adminregisterFormEmail==Courriel
+adminregisterFormEmailPlaceholder==Entrez votre adresse électronique
+adminregisterFormPassword==Mot de passe :
+adminregisterFormPasswordPlaceholder==Entrez le mot de passe
+adminregisterFormPasswordconfirmation==Confirmez le mot de passe :
+adminregisterFormPasswordconfirmationPlaceholder==Saisir à nouveau le mot de passe
+adminregisterFormTelephone==Téléphone (facultatif) :
+adminregisterFormTelephonePlaceholder==Entrez le numéro de téléphone
+adminregisterFormNote==Note (facultatif) :
+adminregisterFormNotePlaceholder==Note (facultatif)
+adminregisterFormRegisterButton==S'inscrire
+adminregisterLoginInfo==Vous avez un compte administratif ?
+adminregisterLoginLink==Connexion
+bookSiteHeader==Prendre ce rendez-vous
+bookSiteSubheader==Cliquez sur le bouton ci-dessous pour payer et réserver le rendez-vous suivant :
+bookTableTimedateHeader==Heure - Date :
+bookTableNameHeader==Nom :
+bookTableDescriptionHeader==Description :
+bookTableRateHeader==Taux :
+bookBookButtonAlt==Régler avec PayPal
+bookBookButtonText==Livre
+contactSiteHeader==Contactez
+contactSiteSubHeader==Coordonnées
+createSiteHeader==Ajouter une nouvelle nomination
+createRateErrorSnackbar==ERREUR : Votre taux doit avoir une valeur d'au moins 1 (>=1)
+createSuccessSnackbar==Une nouvelle nomination a été ajoutée
+createFormTImeoftheappointmentColumnPlaceholder==Heure
+createFormDateoftheappointmentColumnHeader==Date de la nomination
+createFormDateoftheappointmentColumnPlaceholder==Date de la nomination
+createFormNameColumnHeader==Titre de la nomination
+createFormNameColumnPlaceholder==Titre de la nomination
+createFormDescriptionColumnHeader==Description de la nomination
+createFormDescriptionColumnPlaceholder==Description de la nomination
+createFormRateColumnPlaceholder==Taux (prix) - Par défaut : 1 _%_.
+createFormSaveButton==Sauvegarder le rendez-vous
+createFormBackButton==Retour
+editSiteHeader==Rendez-vous de montage
+editSuccessSnackbar==Le rendez-vous a été mis à jour avec succès !
+editFormTimeoftheappointmentColumnPlaceholder==Heure
+editFormDateoftheappointmentColumnHeader==Date de la nomination
+editFormDateoftheappointmentColumnPlaceholder==Date de la nomination
+editFormNameColumnHeader==Titre de la nomination
+editFormDescriptionColumnHeader==Description de la nomination
+editFormRateColumnHeader==Taux (prix) - Par défaut : 1 _%_.
+editFormSaveButton==Sauvegarder le rendez-vous
+editFormBackButton==Retour
+generalnoticeSiteHeader==Avis général
+listAddnewappointmentButton==Ajouter une nouvelle nomination
+listDeleteAppointmentSuccess==La nomination a été supprimée avec succès !
+listAdmindashboardButton==Tableau de bord de l'administration
+listTableDateHeader==Date
+listTableAppointmentNameHeader==Nom de la nomination
+listTableDescriptionHeader==Description
+listTableRateHeader==Tarifs
+listTableBooknowHeader==Réservez maintenant
+listTableBooknowButton==Livre
+listTableEditdeleteHeader==Modifier/supprimer
+listTableEditButton==Edit
+listTableDeleteButton==Supprimer
+listNoAppointments==Il n'y a pas de rendez-vous disponibles pour le moment. Veuillez revenir plus tard.
+paymentcancelSiteHeader==Le paiement a été annulé
+paymentcancelSiteSubtext==Votre rendez-vous n'a pas été pris.
+paymentsucessSiteHeader==Le paiement a été effectué avec succès
+paymentsucessSiteSubtext==Votre rendez-vous (id : _%_) a été pris avec succès.
+paymentsucessDatetimeHeader==Heure - Date :
+paymentsucessNameHeader==Nom :
+paymentsucessDescriptionHeader==Description :
+paymentsucessRateHeader==Tarif :
+paymentsucessBackButton==Retour
+paymentsucessPrintButton==Imprimer
+privacypolicySiteHeader==Politique de confidentialité
+processpaymentSiteHeader==Procéder au paiement...
+settingsSiteHeader==Paramètres
+settingsCurrencyDescription==Monnaie
+settingsCurrencyInfo==Information : La monnaie ne peut pas être changée pour les nominations déjà existantes.  
+settingsButtonSave==Sauvegarder
+settingsButtonBack==Retour
+settingsSuccessSnackbar==D'ACCORD. Les réglages ont été enregistrés avec succès
+settingsFailedSnackbar==Erreur. Les réglages n'ont pas pu être sauvegardés. 

@@ -2,12 +2,22 @@
   <div style="flex-grow: 5;">
     <span id="titleWebsite"><img src="assets/img/logo.png" width="30px" style="margin-top: 10px" /> <a href="/"
         style="text-decoration: none; color: brown">The Consulting Company</a></span>
+    <br>
+    <mat-form-field class="languageSelector">
+      <mat-label style="font-size: 12px;">{{userSelectedLanguageValue.languagename}}</mat-label>
+      <mat-select (selectionChange)="onLanguageSelected($event.value)">
+        <mat-option [value]="lang.code" *ngFor="let lang of languages">{{lang.languagename}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+
   </div>
   <div style="flex-grow: 1;" *ngIf="!adminLoggedIn">
-    <span><a [routerLink]="" (click)="showAdminAgentPage()" id=adminsectionLink>Agent (Admin) section </a></span>
+    <span><a [routerLink]="" (click)="showAdminAgentPage()"
+        id=adminsectionLink>{{uiString.get("appAgentSectionMenutitle")}}</a></span>
   </div>
   <div style="flex-grow: 1;" *ngIf="adminLoggedIn">
-    <span><a href="/admin-logout" id=adminsectionLink>Logout </a></span>
+    <span><a href="/admin-logout" id=adminsectionLink>{{uiString.get("appLogoutButtonMenutitle")}} </a></span>
   </div>
 </mat-toolbar>
 
@@ -24,9 +34,9 @@
   </mat-toolbar-row>
   <mat-toolbar-row>
     <li class="footer-links">
-      <ul><a href="/general-notice">General notice</a></ul>
-      <ul><a href="/privacy-policy">Data privacy</a></ul>
-      <ul><a href="/contact">Contact</a></ul>
+      <ul><a href="/general-notice">{{uiString.get("appGeneralnoticeFootertitle")}}</a></ul>
+      <ul><a href="/privacy-policy">{{uiString.get("appPrivacypolicyFootertitle")}}</a></ul>
+      <ul><a href="/contact">{{uiString.get("appContactFootertitle")}}</a></ul>
     </li>
   </mat-toolbar-row>
 </mat-toolbar>

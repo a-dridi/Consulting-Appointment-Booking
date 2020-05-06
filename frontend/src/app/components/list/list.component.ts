@@ -5,6 +5,8 @@ import { Router } from '@angular/router';
 import { MatSnackBarModule, MatSnackBar } from '@angular/material/snack-bar';
 
 import { Appointment } from '../../appointment.model';
+import { AppComponent } from 'src/app/app.component';
+import { AppSettings } from 'src/app/appsettings.model';
 
 
 @Component({
@@ -13,7 +15,9 @@ import { Appointment } from '../../appointment.model';
   styleUrls: ['./list.component.css']
 })
 export class ListComponent implements OnInit {
-
+  public uiString: Map<String, String>;
+  public appsettings: AppSettings[] = [];
+  public selectedCurrency: String;
 
   appointments: Appointment[];
   //Columns default for admin/agents
@@ -24,6 +28,9 @@ export class ListComponent implements OnInit {
   paymentSessionObject: String;
 
   constructor(private appointmentService: AppointmentService, private snackBar: MatSnackBar, private router: Router) {
+    this.uiString = AppComponent.uiStringFinal;
+    this.loadAppSettings();
+
     appointmentService.checkAdminAuthentication()
       .subscribe(
         data => {
@@ -40,6 +47,22 @@ export class ListComponent implements OnInit {
 
   ngOnInit(): void {
     this.loadAppointments();
+  }
+
+  loadAppSettings() {
+    this.appointmentService.getAllAppSettings()
+      .subscribe((data: AppSettings[]) => {
+        this.appsettings = data;
+        this.setUsedSettings(data);
+      })
+  }
+
+  setUsedSettings(appSettings) {
+    appSettings.forEach(element => {
+      if (element.code === "defaultCurrency") {
+        this.selectedCurrency = element.value;
+      }
+    });
   }
 
   loadAppointments() {
@@ -60,7 +83,7 @@ export class ListComponent implements OnInit {
   deleteAppointment(id) {
     this.appointmentService.deleteAppointment(id).subscribe(() => {
       this.loadAppointments();
-      this.snackBar.open("Appointment was deleted successfully!", "OK", {
+      this.snackBar.open("" + this.uiString.get("listDeleteAppointmentSuccess"), "OK", {
         duration: 4000
       });
     });

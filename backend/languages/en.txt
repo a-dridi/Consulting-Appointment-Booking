@@ -1,0 +1,135 @@
+en
+appAgentSectionMenutitle==Agent / Admin Section
+appLogoutButtonMenutitle==Logout
+appGeneralnoticeFootertitle==General Notice
+appPrivacypolicyFootertitle==Privacy Policy
+appContactFootertitle==Contact
+adminSuccessSnackbar==Booked Appointment was deleted successfully!
+adminGreeting==Hello _%_
+adminHeaderAppointmentsToday==Today: You have _%_ booked appointments for today
+adminAllCreatedAppointmentsButton==All created appointments
+adminCreatenewappointmentsButton==Create new appointments
+adminSettingsButton==Settings
+adminTodayBookedAppointmentsHeader==Today: Booked appointments by clients
+adminDateBookedAppointmentsTableHeader==Date
+adminClientnameBookedAppointmentsTableHeader==Client Name
+adminClientemailBookedAppointmentsTableHeader==Client Email
+adminClientTelephoneBookedAppointmentsTableHeader==Client Telephone
+adminAppointmentNameBookedAppointmentsTableHeader==Appointment Name
+adminDescriptionBookedAppointmentsTableHeader==Description
+adminRateBookedAppointmentsTableHeader==Rate
+adminDeleteBookedAppointmentsTableHeader==Delete
+adminDeleteBookedAppointmentsTableButton==Delete
+adminNoBookedAppointmentsTablePlaceholder==You have 0 booked appointments for today
+adminAllBookedAppointmentsHeader==All: Booked appointments by clients
+adminDateAllBookedAppointmentsTableHeader==Date
+adminClientnameAllBookedAppointmentsTableHeader==Client Name
+adminClientemailAllBookedAppointmentsTableHeader==Client Email
+adminClienttelephoneAllBookedAppointmentsTableHeader==Client Telephone
+adminAppointmentnameAllBookedAppointmentsTableHeader==Appointment Name
+adminDescriptionAllBookedAppointmentsTableHeader==Description
+adminRateAllBookedAppointmentsTableHeader==Rate
+adminDeleteAllBookedAppointmentsTableHeader==Delete
+adminDeleteAllBookedAppointmentsTableButton==Delete
+adminNoAllBookedAppointmentsTablePlaceholder==There are no booked appointments by your clients. 
+adminCurrencySettingHeader==Select currency:
+adminCurrencySettingButton==OK
+adminloginWrongPasswordSnackbar==Please enter your correct email address and password of your admin account!
+adminloginLoginFailedSnackbar==LOGIN FAILED. Please enter your correct email address and password of your admin account.
+adminloginSiteHeader==Admin Login
+adminloginFormEmail==Email:
+adminloginFormEmailPlaceholder==Enter Email
+adminloginFormPassword==Password:
+adminloginFormPasswordPlaceholder==Enter Password
+adminloginFormLoginButton==Login
+adminloginNoAdminAccountCreatedText==YOU HAVE TO REGISTER AN ADMIN ACCOUNT BEFORE YOU USE THIS APPLICATION FOR PRODUCTION USE:
+adminloginRegisterLink==Register
+adminregisterSiteheader==Register Admin Account
+adminregisterEmptyFieldSnackbar==Please enter all required fields correctly!
+adminregisterPasswordNotSameSnackbar==Password and Password confirmation must be the same!
+adminregisterPasswordTooShortSnackbar==Password must be at least 6 characters long!
+adminregisterRegistrationSuccessSnackbar==OK. Registration is done. Please login with your account credentials now.
+adminregisterRegistrationFailedSnackbar==Registration failed! Please enter all required fields correctly.
+adminregisterSitesubheader==You can register only one admin account, that can be used to view your agent/admin dashboard.
+adminregisterAdminAccountCreated==Admin account is already registered. Please use your admin account credentials to login.
+adminregisterFormName==Name
+adminregisterFormNamePlaceholder==Enter Name
+adminregisterFormEmail==Email
+adminregisterFormEmailPlaceholder==Enter Email
+adminregisterFormPassword==Password:
+adminregisterFormPasswordPlaceholder==Enter Password
+adminregisterFormPasswordconfirmation==Confirm Password:
+adminregisterFormPasswordconfirmationPlaceholder==Enter Password again
+adminregisterFormTelephone==Telephone (optional):
+adminregisterFormTelephonePlaceholder==Enter Telephone number
+adminregisterFormNote==Note (optional):
+adminregisterFormNotePlaceholder==Optional note
+adminregisterFormRegisterButton==Register
+adminregisterLoginInfo==You Have An Admin Account?
+adminregisterLoginLink==Login
+bookSiteHeader==Book this appointment
+bookSiteSubheader==Click on the button below to pay and book the following appointment:
+bookTableTimedateHeader==Time - Date:
+bookTableNameHeader==Name:
+bookTableDescriptionHeader==Description:
+bookTableRateHeader==Rate:
+bookBookButtonAlt==Check out with PayPal
+bookBookButtonText==Book
+contactSiteHeader==Contact
+contactSiteSubHeader==Contact details
+createSiteHeader==Add new appointment
+createRateErrorSnackbar==ERROR: Your rate must have a value of at least 1 (>=1)
+createSuccessSnackbar==New appointment was added
+createFormTImeoftheappointmentColumnPlaceholder==Time
+createFormDateoftheappointmentColumnHeader==Date of the appointment
+createFormDateoftheappointmentColumnPlaceholder==Date of the appointment
+createFormNameColumnHeader==Title of the appointment
+createFormNameColumnPlaceholder==Appointment title
+createFormDescriptionColumnHeader==Description of the appointment
+createFormDescriptionColumnPlaceholder==Appointment description
+createFormRateColumnPlaceholder==Rate (Price) - Default: 1 _%_
+createFormSaveButton==Save appointment
+createFormBackButton==Back
+editSiteHeader==Edit appointment
+editSuccessSnackbar==Appointment was updated successfully!
+editFormTimeoftheappointmentColumnPlaceholder==Time
+editFormDateoftheappointmentColumnHeader==Date of the appointment
+editFormDateoftheappointmentColumnPlaceholder==Date of the appointment
+editFormNameColumnHeader==Title of the appointment
+editFormDescriptionColumnHeader==Description of the appointment
+editFormRateColumnHeader==Rate (Price) - Default: 1 _%_
+editFormSaveButton==Save appointment
+editFormBackButton==Back
+generalnoticeSiteHeader==General Notice
+listAddnewappointmentButton==Add new appointment
+listDeleteAppointmentSuccess==Appointment was deleted successfully!
+listAdmindashboardButton==Admin Dashboard
+listTableDateHeader==Date
+listTableAppointmentNameHeader==Appointment Name
+listTableDescriptionHeader==Description
+listTableRateHeader==Rate
+listTableBooknowHeader==Book now
+listTableBooknowButton==Book
+listTableEditdeleteHeader==Edit/Delete
+listTableEditButton==Edit
+listTableDeleteButton==Delete
+listNoAppointments==There are no available appointments at the moment. Please come back later.
+paymentcancelSiteHeader==Payment was cancelled
+paymentcancelSiteSubtext==Your appointment was not booked.
+paymentsucessSiteHeader==Payment was successful
+paymentsucessSiteSubtext==Your appointment (id: _%_) was successfully booked.
+paymentsucessDatetimeHeader==Time - Date:
+paymentsucessNameHeader==Name:
+paymentsucessDescriptionHeader==Description:
+paymentsucessRateHeader==Rate:
+paymentsucessBackButton==Back
+paymentsucessPrintButton==Print
+privacypolicySiteHeader==Privacy Policy
+processpaymentSiteHeader==Process payment...
+settingsSiteHeader==Settings
+settingsCurrencyDescription==Currency
+settingsCurrencyInfo==Information: Currency cannot be changed for already existing appointments.  
+settingsButtonSave==Save
+settingsButtonBack==Back
+settingsSuccessSnackbar==OK. Settings were saved successfully
+settingsFailedSnackbar==Error. Settings could not be saved. 
