@@ -73,11 +73,14 @@ export class AppComponent {
     if (userSelectedLanguage === null) {
       let userLanguage = (navigator.language).split("-")[0];
 
-      //User language cannot be queried or is not available in this app
-      if (userLanguage === undefined || userLanguage === "" || this.languages[userLanguage] === undefined) {
-        this.userSelectedLanguageValue = { code: "en", languagename: "English" };
-      } else {
-        this.userSelectedLanguageValue = this.languages[userLanguage];
+      //Check if user language can be queried and is available in this app
+      if (userLanguage !== undefined || userLanguage !== "") {
+        this.languages.forEach(
+          language => {
+            if (language.code === userLanguage) {
+              this.userSelectedLanguageValue = { code: language.code, languagename: language.languagename }
+            }
+          })
       }
       this.loadUiText(userLanguage);
 
@@ -86,8 +89,10 @@ export class AppComponent {
       let selectedIndex = this.languages.findIndex(lang => lang.code == userSelectedLanguage)
       this.userSelectedLanguageValue = this.languages[selectedIndex];
       this.loadUiText(this.userSelectedLanguageValue.code);
-    }
+      console.log("state 2")
 
+    }
+    console.log("info " + this.userSelectedLanguageValue.code)
   }
 
   onLanguageSelected(event) {
@@ -95,7 +100,7 @@ export class AppComponent {
 
     let selectedIndex = this.languages.findIndex(lang => lang.code == newSelectedLanguage)
 
-    this.userSelectedLanguageValue = { code: ""+this.languages[selectedIndex].code, languagename: ""+this.languages[selectedIndex].languagename } ;
+    this.userSelectedLanguageValue = { code: "" + this.languages[selectedIndex].code, languagename: "" + this.languages[selectedIndex].languagename };
     this.loadUiText(newSelectedLanguage);
     sessionStorage.removeItem("appX283ndSelectedLanguage");
     sessionStorage.setItem("appX283ndSelectedLanguage", "" + newSelectedLanguage);

@@ -41,7 +41,7 @@ adminloginFormEmail==E-Mail:
 adminloginFormEmailPlaceholder==E-Mail eingeben
 adminloginFormPassword==Kennwort:
 adminloginFormPasswordPlaceholder==Passwort eingeben
-adminloginFormLoginButton==Anmeldung
+adminloginFormLoginButton==Einloggen
 adminloginNoAdminAccountCreatedText==SIE MÜSSEN EIN ADMIN-KONTO REGISTRIEREN, BEVOR SIE DIESE ANWENDUNG FÜR DEN PRODUKTIONSEINSATZ VERWENDEN KÖNNEN:
 adminloginRegisterLink==Registrieren
 adminregisterSiteheader==Administratorkonto registrieren
@@ -60,21 +60,21 @@ adminregisterFormPassword==Kennwort:
 adminregisterFormPasswordPlaceholder==Passwort eingeben
 adminregisterFormPasswordconfirmation==Bestätigen Sie das Passwort:
 adminregisterFormPasswordconfirmationPlaceholder==Passwort erneut eingeben
-adminregisterFormTelephone==Telefon (fakultativ):
+adminregisterFormTelephone==Telefon (optional):
 adminregisterFormTelephonePlaceholder==Telefonnummer eingeben
-adminregisterFormNote==Anmerkung (fakultativ):
+adminregisterFormNote==Anmerkung (optional):
 adminregisterFormNotePlaceholder==Optionale Anmerkung
 adminregisterFormRegisterButton==Registrieren
 adminregisterLoginInfo==Sie haben ein Administratorkonto?
-adminregisterLoginLink==Anmeldung
+adminregisterLoginLink==Registrierung
 bookSiteHeader==Diesen Termin buchen
-bookSiteSubheader==Klicken Sie auf die Schaltfläche unten, um den folgenden Termin zu bezahlen und zu buchen:
+bookSiteSubheader==Klicken Sie auf den Button unten, um den folgenden Termin zu bezahlen und zu buchen:
 bookTableTimedateHeader==Uhrzeit - Datum:
 bookTableNameHeader==Name: Name:
 bookTableDescriptionHeader==Beschreibung:
 bookTableRateHeader==Preis:
-bookBookButtonAlt==Mit PayPal auschecken
-bookBookButtonText==Buch
+bookBookButtonAlt==Mit PayPal bezahlen
+bookBookButtonText==Buchen
 contactSiteHeader==Kontakt
 contactSiteSubHeader==Kontaktdaten
 createSiteHeader==Neuen Termin hinzufügen
@@ -109,10 +109,10 @@ listTableAppointmentNameHeader==Name des Termins
 listTableDescriptionHeader==Beschreibung
 listTableRateHeader==Preis
 listTableBooknowHeader==Jetzt buchen
-listTableBooknowButton==Buch
+listTableBooknowButton==Buchen
 listTableEditdeleteHeader==Bearbeiten/Löschen
-listTableEditButton==bearbeiten
-listTableDeleteButton==löschen
+listTableEditButton==Bearbeiten
+listTableDeleteButton==Löschen
 listNoAppointments==Zur Zeit sind keine Termine verfügbar. Bitte kommen Sie später wieder.
 paymentcancelSiteHeader==Zahlung wurde storniert
 paymentcancelSiteSubtext==Ihr Termin wurde nicht gebucht.
@@ -120,7 +120,7 @@ paymentsucessSiteHeader==Die Zahlung war erfolgreich.
 paymentsucessSiteSubtext==Ihr Termin (id: _%_) wurde erfolgreich gebucht.
 paymentsucessDatetimeHeader==Zeit - Datum:
 paymentsucessNameHeader==Ihr Name:
-paymentsucessDescriptionHeader==Beschreibung: Beschreibung:
+paymentsucessDescriptionHeader==Beschreibung:
 paymentsucessRateHeader==Preis:
 paymentsucessBackButton==Zurück
 paymentsucessPrintButton==Drucken
@@ -129,7 +129,7 @@ processpaymentSiteHeader==Zahlung bearbeiten...
 settingsSiteHeader==Einstellungen
 settingsCurrencyDescription==Währung
 settingsCurrencyInfo==Informationen: Für bereits bestehende Termine kann die Währung nicht geändert werden.  
-settingsButtonSave==Speichern Sie
+settingsButtonSave==Speichern
 settingsButtonBack==Zurück
 settingsSuccessSnackbar==OK. Einstellungen wurden erfolgreich gespeichert
 settingsFailedSnackbar==Fehler. Einstellungen konnten nicht gespeichert werden. 
