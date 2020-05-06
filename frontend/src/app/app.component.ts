@@ -71,7 +71,8 @@ export class AppComponent {
 
     //Language was not selected - not saved in session storage
     if (userSelectedLanguage === null) {
-      let userLanguage = navigator.language;
+      let userLanguage = (navigator.language).split("-")[0];
+
       //User language cannot be queried or is not available in this app
       if (userLanguage === undefined || userLanguage === "" || this.languages[userLanguage] === undefined) {
         this.userSelectedLanguageValue = { code: "en", languagename: "English" };

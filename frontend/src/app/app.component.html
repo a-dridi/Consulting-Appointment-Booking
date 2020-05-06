@@ -4,8 +4,7 @@
         style="text-decoration: none; color: brown">The Consulting Company</a></span>
     <br>
     <mat-form-field class="languageSelector">
-      <mat-label style="font-size: 12px;">{{userSelectedLanguageValue.languagename}}</mat-label>
-      <mat-select (selectionChange)="onLanguageSelected($event.value)">
+      <mat-select [(value)]="userSelectedLanguageValue.code" (selectionChange)="onLanguageSelected($event.value)">
         <mat-option [value]="lang.code" *ngFor="let lang of languages">{{lang.languagename}}</mat-option>
       </mat-select>
     </mat-form-field>
