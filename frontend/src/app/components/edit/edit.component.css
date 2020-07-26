@@ -14,3 +14,8 @@
 .container-appointment-main {
     display: inherit;
 }
+
+.inputForm {
+    background: aliceblue;
+    padding: 5px;
+}

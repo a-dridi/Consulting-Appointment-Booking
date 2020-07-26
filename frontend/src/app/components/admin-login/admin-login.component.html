@@ -11,12 +11,12 @@
                 <div class="form-group">
                     <label for="email">{{uiString.get("adminloginFormEmail")}} </label>
                     <br>
-                    <input type="email" id="email" matInput placeholder="{{emailPlaceholder}}" formControlName="email" #email>
+                    <input matInput type="email" class="inputForm" id="email" formControlName="email" #email>
                 </div>
                 <div class="form-group">
                     <label for="password">{{uiString.get("adminloginFormPassword")}} </label>
                     <br>
-                    <input type="password" id="password" matInput placeholder="{{passwordPlaceholder}}"
+                    <input matInput type="password" class="inputForm" id="password"
                         formControlName="password" #password>
                 </div>
                 <button type="submit" (click)="loginadmin(email.value, password.value)"

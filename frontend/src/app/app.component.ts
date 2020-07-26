@@ -30,6 +30,7 @@ export class AppComponent {
     { code: "zh", languagename: "中文" }
   ];
   userSelectedLanguageValue: Language = { code: "en", languagename: "English" };
+  loadingAnimation: Boolean = true;
 
   constructor(private adminDataSharingService: AdminDataSharingService, private appointmentService: AppointmentService, private router: Router) {
     //Check language of user os and load it
@@ -114,7 +115,9 @@ export class AppComponent {
       .subscribe((data: UiText[]) => {
         data.forEach(function (dataItem) {
           createUiString.set(dataItem.code, dataItem.translation);
-        })
+        });
+        //Stop loading animation
+        setTimeout(() => { this.loadingAnimation = false }, 500);
       });
 
     this.uiString = createUiString;

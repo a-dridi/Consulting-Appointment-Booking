@@ -109,7 +109,7 @@ export class EditComponent implements OnInit {
   setUsedSettings(appSettings) {
     appSettings.forEach(element => {
       if (element.code === "defaultCurrency") {
-        this.selectedCurrency = element.value;
+        this.selectedCurrency = " " + element.value;
       }
     });
   }

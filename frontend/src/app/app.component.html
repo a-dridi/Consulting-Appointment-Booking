@@ -20,6 +20,10 @@
   </div>
 </mat-toolbar>
 
+<div class="loadingAnimation" *ngIf="loadingAnimation">
+  <mat-spinner></mat-spinner>
+</div>
+
 <div>
   <router-outlet></router-outlet>
 </div>

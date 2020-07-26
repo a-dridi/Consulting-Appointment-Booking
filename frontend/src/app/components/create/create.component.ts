@@ -108,7 +108,7 @@ export class CreateComponent implements OnInit {
   setUsedSettings(appSettings){
     appSettings.forEach(element => {
       if(element.code === "defaultCurrency"){
-        this.selectedCurrency = element.value;
+        this.selectedCurrency = " " + element.value;
       }
     });
     this.ratePlaceholder = this.uiString.get("createFormRateColumnPlaceholder").replace("_%_",""+this.selectedCurrency);

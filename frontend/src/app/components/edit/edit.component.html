@@ -9,24 +9,24 @@
         <form [formGroup]="updateForm" class="update-form">
             <div fxLayout="row" class="field-full-width">
                 <mat-form-field>
-                    <input matInput [ngxTimepicker]="timepicker" [format]="24" placeholder="{{timePlaceholder}}" value="{{selectedTime}}">
+                    <input class="inputForm" matInput [ngxTimepicker]="timepicker" [format]="24" placeholder="{{timePlaceholder}}" value="{{selectedTime}}">
                 </mat-form-field>
                 <ngx-material-timepicker (timeSet)="updateTime($event)" #timepicker></ngx-material-timepicker>
                 <mat-form-field>
                     <mat-label>{{uiString.get("editFormDateoftheappointmentColumnHeader")}}</mat-label>
-                    <input matInput [matDatepicker]="picker" placeholder="{{datePlaceholder}}" formControlName="date" #date>
+                    <input class="inputForm" matInput [matDatepicker]="picker" placeholder="{{datePlaceholder}}" formControlName="date" #date>
                     <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
                     <mat-datepicker touchUi #picker></mat-datepicker>
                 </mat-form-field>
             </div>    
             <mat-form-field class="field-full-width">
-                <input matInput placeholder="{{namePlaceholder}}" formControlName="name" #name>
+                <input class="inputForm" matInput placeholder="{{namePlaceholder}}" formControlName="name" #name>
             </mat-form-field>
             <mat-form-field class="field-full-width">
-                <input matInput placeholder="{{descriptionPlaceholder}}" formControlName="description" #description>
+                <input class="inputForm" matInput placeholder="{{descriptionPlaceholder}}" formControlName="description" #description>
             </mat-form-field>
             <mat-form-field class="field-full-width">
-                <input matInput placeholder="{{ratePlaceholder}}" formControlName="rate" #rate> {{selectedCurrency}}
+                <input class="inputForm" matInput placeholder="{{ratePlaceholder}}" formControlName="rate" #rate> {{selectedCurrency}}
             </mat-form-field>
             <mat-divider>
             </mat-divider>

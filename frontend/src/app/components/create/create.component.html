@@ -1,39 +1,39 @@
 <div>
-<br>
-<mat-card class="container-appointment-main">
-    <section class="mat-typograhy">
-        <h3>{{uiString.get("createSiteHeader")}}</h3>
-    </section>
-    <mat-divider></mat-divider>
     <br>
-    <form [formGroup]="createForm" class="create-form">
-        <div fxLayout="row" class="field-full-width">
-            <mat-form-field>
-                <input matInput [ngxTimepicker]="timepicker" [format]="24" placeholder="{{timePlaceholder}}">
-            </mat-form-field>
-            <ngx-material-timepicker (timeSet)="updateTime($event)" #timepicker></ngx-material-timepicker>
-            <mat-form-field>
-                <mat-label>{{uiString.get("createFormDateoftheappointmentColumnHeader")}}</mat-label>
-                <input matInput [matDatepicker]="picker" placeholder="{{datePlaceholder}}" formControlName="date" #date>
-                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-                <mat-datepicker touchUi #picker></mat-datepicker>
-            </mat-form-field>
-        </div>
-        <mat-form-field class="field-full-width">
-            <input matInput placeholder="{{namePlaceholder}}" formControlName="name" #name>
-        </mat-form-field>
-        <mat-form-field class="field-full-width">
-            <input matInput placeholder="{{descriptionPlaceholder}}" formControlName="description" #description>
-        </mat-form-field>
-        <mat-form-field class="field-full-width">
-            <input matInput placeholder="{{ratePlaceholder}}" formControlName="rate" #rate style="width: 50%"> <span>{{selectedCurrency}}</span>
-        </mat-form-field>
-        <mat-divider>
-        </mat-divider>
+    <mat-card class="container-appointment-main">
+        <section class="mat-typograhy">
+            <h3>{{uiString.get("createSiteHeader")}}</h3>
+        </section>
+        <mat-divider></mat-divider>
         <br>
-        <br>
-        <button id="submitButton" type="submit" (click)="addAppointment(date.value, name.value, description.value, rate.value)" [disabled]="createForm.pristine || createForm.invalid" mat-raised-button color="primary" class="button-submit-appointment">{{uiString.get("createFormSaveButton")}}</button>
-        <button id="backButton" mat-raised-button color="accent" routerLink="/allappointments">< {{uiString.get("createFormBackButton")}}</button>
-    </form>
-</mat-card>
-</div>
+        <form [formGroup]="createForm" class="create-form">
+            <div fxLayout="row" class="field-full-width">
+                <mat-form-field>
+                    <input matInput class="inputForm" [ngxTimepicker]="timepicker" [format]="24" placeholder="{{timePlaceholder}}">
+                </mat-form-field>
+                <ngx-material-timepicker (timeSet)="updateTime($event)" #timepicker></ngx-material-timepicker>
+                <mat-form-field>
+                    <mat-label>{{uiString.get("createFormDateoftheappointmentColumnHeader")}}</mat-label>
+                    <input matInput class="inputForm" [matDatepicker]="picker" placeholder="{{datePlaceholder}}" formControlName="date" #date>
+                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker touchUi #picker></mat-datepicker>
+                </mat-form-field>
+            </div>
+            <mat-form-field class="field-full-width">
+                <input matInput class="inputForm" placeholder="{{namePlaceholder}}" formControlName="name" #name>
+            </mat-form-field>
+            <mat-form-field class="field-full-width">
+                <input matInput class="inputForm" placeholder="{{descriptionPlaceholder}}" formControlName="description" #description>
+            </mat-form-field>
+            <mat-form-field class="field-full-width">
+                <input matInput class="inputForm" placeholder="{{ratePlaceholder}}" formControlName="rate" #rate style="width: 50%"> <span>{{selectedCurrency}}</span>
+            </mat-form-field>
+            <mat-divider>
+            </mat-divider>
+            <br>
+            <br>
+            <button id="submitButton" type="submit" (click)="addAppointment(date.value, name.value, description.value, rate.value)" [disabled]="createForm.pristine || createForm.invalid" mat-raised-button color="primary" class="button-submit-appointment">{{uiString.get("createFormSaveButton")}}</button>
+            <button id="backButton" mat-raised-button color="accent" routerLink="/allappointments">< {{uiString.get("createFormBackButton")}}</button>
+        </form>
+    </mat-card>
+    </div>
