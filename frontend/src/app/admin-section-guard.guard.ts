@@ -22,7 +22,6 @@ export class AdminSectionGuardGuard implements CanActivate {
       this.router.navigate(['/admin-login']);
       return false;
     });
-
   }
 
 }
