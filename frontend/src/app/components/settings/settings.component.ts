@@ -21,18 +21,8 @@ export class SettingsComponent implements OnInit {
   constructor(private appointmentService: AppointmentService, private router: Router, private snackBar: MatSnackBar) {
     this.uiString = AppComponent.uiStringFinal;
 
-    appointmentService.checkAdminAuthentication()
-      .subscribe(
-        data => {
-          //LOAD THIS PAGE if admin is authenticated
-          this.loadAppSettings();
-          this.currencies = Currencies.getCurrencies();
-        },
-        error => {
-          this.router.navigate(['/admin-login']);
-        }
-      )
-
+    this.loadAppSettings();
+    this.currencies = Currencies.getCurrencies();
   }
 
   ngOnInit(): void {
@@ -42,16 +32,14 @@ export class SettingsComponent implements OnInit {
    * Load saved AppSettings. When the function is started for the first time, then settings are added with default values.
    */
   loadAppSettings() {
-
     this.appointmentService.getAllAppSettings()
       .subscribe((data: AppSettings[]) => {
         console.log("data loaded")
         data.forEach(dataItem => {
           this.appsettings.set(dataItem.code, dataItem.value);
         })
-          this.loadSelectedSettings(this.appsettings);
-      })
-
+        this.loadSelectedSettings(this.appsettings);
+      });
   }
 
   loadSelectedSettings(appSettings: Map<String, String>) {

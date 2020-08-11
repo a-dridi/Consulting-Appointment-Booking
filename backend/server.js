@@ -327,8 +327,7 @@ router.route("/registration").post((req, res, next) => {
                             .then(adminaccount => res.json("Admin account was successfully created."))
                             .catch(err => res.status(400).send(err));
                     }
-                }))
-
+                }));
         }
     });
 });

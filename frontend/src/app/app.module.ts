@@ -40,23 +40,24 @@ import { GeneralNoticeComponent } from './components/general-notice/general-noti
 import { PrivacyPolicyComponent } from './components/privacy-policy/privacy-policy.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { SettingsComponent } from './components/settings/settings.component';
+import { AdminSectionGuardGuard } from './admin-section-guard.guard';
 
 const appRoutes: Routes = [
-{path: "create", component: CreateComponent},
-{path: 'edit/:id', component: EditComponent},
+{path: "create", component: CreateComponent, canActivate: [AdminSectionGuardGuard]},
+{path: 'edit/:id', component: EditComponent, canActivate: [AdminSectionGuardGuard]},
 {path: 'book/:id', component: BookComponent},
 {path: 'allappointments', component: ListComponent},
 {path: 'paymentsuccess/:id', component: PaymentsuccessComponent},
 {path: 'paymentcancel', component: PaymentcancelComponent},
 {path: 'processpayment', component: ProcesspaymentComponent},
-{path: 'admin', component: AdminComponent},
+{path: 'admin', component: AdminComponent, canActivate: [AdminSectionGuardGuard]},
 {path: 'admin-login', component: AdminLoginComponent},
 {path: 'admin-logout', component: AdminLogoutComponent},
 {path: 'admin-registration', component: AdminRegistrationComponent},
 {path: 'general-notice', component: GeneralNoticeComponent},
 {path: 'privacy-policy', component: PrivacyPolicyComponent},
 {path: 'contact', component: ContactComponent},
-{path: 'settings', component: SettingsComponent},
+{path: 'settings', component: SettingsComponent, canActivate: [AdminSectionGuardGuard]},
 
 {path: '', redirectTo: 'allappointments', pathMatch: 'full'}
 ];

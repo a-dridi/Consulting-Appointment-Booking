@@ -27,20 +27,9 @@ export class AdminComponent implements OnInit {
 
   constructor(private appointmentService: AppointmentService, private router: Router, private snackBar: MatSnackBar) {
     this.uiString = AppComponent.uiStringFinal;
-
-    appointmentService.checkAdminAuthentication()
-      .subscribe(
-        data => {
-          //LOAD THIS PAGE if admin is authenticated
-          this.loadUsername();
-          this.loadBookedAppointmentsToday();
-          this.loadBookedAppointments();
-        },
-        error => {
-          this.router.navigate(['/admin-login']);
-        }
-      )
-
+    this.loadUsername();
+    this.loadBookedAppointmentsToday();
+    this.loadBookedAppointments();
   }
 
   ngOnInit(): void {
@@ -63,7 +52,7 @@ export class AdminComponent implements OnInit {
         if (this.bookedAppointmentClients.length > 0) {
           this.noBookedAppointments = false;
         }
-      })
+      });
   }
 
   /**
@@ -74,7 +63,7 @@ export class AdminComponent implements OnInit {
       .getBookedAppointmentsClientsToday()
       .subscribe((data: BookedAppointmentView[]) => {
         this.bookedAppointmentClientsToday = data;
-      })
+      });
   }
 
   deleteBookedAppointment(id) {
@@ -85,7 +74,5 @@ export class AdminComponent implements OnInit {
       });
     });
   }
-
-
 
 }
