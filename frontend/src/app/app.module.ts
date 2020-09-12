@@ -1,30 +1,30 @@
-import {BrowserModule} from '@angular/platform-browser';
-import {NgModule} from '@angular/core';
-import {RouterModule, Routes} from '@angular/router';
-import {AppRoutingModule} from './app-routing.module';
-import {AppComponent} from './app.component';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {ListComponent} from './components/list/list.component';
-import {CreateComponent} from './components/create/create.component';
-import {EditComponent} from './components/edit/edit.component';
-import {HttpClientModule, HttpClient} from '@angular/common/http';
-import {MatToolbarModule} from '@angular/material/toolbar';
-import {MatFormFieldModule} from '@angular/material/form-field'; 
-import {MatInputModule} from '@angular/material/input'; 
-import {MatOptionModule} from '@angular/material/core'; 
-import {MatSelectModule} from "@angular/material/select";
-import {MatIconModule} from "@angular/material/icon";
-import {MatButtonModule} from "@angular/material/button";
-import {MatCardModule} from "@angular/material/card";
-import {MatTableModule} from "@angular/material/table";
-import {MatDividerModule} from "@angular/material/divider";
-import {MatSnackBarModule} from '@angular/material/snack-bar'; 
-import {ReactiveFormsModule, FormsModule} from "@angular/forms";
-import {MatDatepickerModule} from '@angular/material/datepicker'; 
-import {MatNativeDateModule} from '@angular/material/core'; 
-import {AppointmentService} from './appointment.service';
-import {NgxMaterialTimepickerModule} from 'ngx-material-timepicker';
-import {DateAdapter, MAT_DATE_FORMATS, MAT_DATE_LOCALE} from '@angular/material/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ListComponent } from './components/list/list.component';
+import { CreateComponent } from './components/create/create.component';
+import { EditComponent } from './components/edit/edit.component';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatOptionModule } from '@angular/material/core';
+import { MatSelectModule } from "@angular/material/select";
+import { MatIconModule } from "@angular/material/icon";
+import { MatButtonModule } from "@angular/material/button";
+import { MatCardModule } from "@angular/material/card";
+import { MatTableModule } from "@angular/material/table";
+import { MatDividerModule } from "@angular/material/divider";
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { ReactiveFormsModule, FormsModule } from "@angular/forms";
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
+import { AppointmentService } from './appointment.service';
+import { NgxMaterialTimepickerModule } from 'ngx-material-timepicker';
+import { DateAdapter, MAT_DATE_FORMATS, MAT_DATE_LOCALE } from '@angular/material/core';
 import { BookComponent } from './components/book/book.component';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { PaymentsuccessComponent } from './components/paymentsuccess/paymentsuccess.component';
@@ -43,23 +43,23 @@ import { SettingsComponent } from './components/settings/settings.component';
 import { AdminSectionGuardGuard } from './admin-section-guard.guard';
 
 const appRoutes: Routes = [
-{path: "create", component: CreateComponent, canActivate: [AdminSectionGuardGuard]},
-{path: 'edit/:id', component: EditComponent, canActivate: [AdminSectionGuardGuard]},
-{path: 'book/:id', component: BookComponent},
-{path: 'allappointments', component: ListComponent},
-{path: 'paymentsuccess/:id', component: PaymentsuccessComponent},
-{path: 'paymentcancel', component: PaymentcancelComponent},
-{path: 'processpayment', component: ProcesspaymentComponent},
-{path: 'admin', component: AdminComponent, canActivate: [AdminSectionGuardGuard]},
-{path: 'admin-login', component: AdminLoginComponent},
-{path: 'admin-logout', component: AdminLogoutComponent},
-{path: 'admin-registration', component: AdminRegistrationComponent},
-{path: 'general-notice', component: GeneralNoticeComponent},
-{path: 'privacy-policy', component: PrivacyPolicyComponent},
-{path: 'contact', component: ContactComponent},
-{path: 'settings', component: SettingsComponent, canActivate: [AdminSectionGuardGuard]},
+  { path: "create", component: CreateComponent, canActivate: [AdminSectionGuardGuard] },
+  { path: 'edit/:id', component: EditComponent, canActivate: [AdminSectionGuardGuard] },
+  { path: 'book/:id', component: BookComponent },
+  { path: 'allappointments', component: ListComponent },
+  { path: 'paymentsuccess/:id', component: PaymentsuccessComponent },
+  { path: 'paymentcancel', component: PaymentcancelComponent },
+  { path: 'processpayment', component: ProcesspaymentComponent },
+  { path: 'admin', component: AdminComponent, canActivate: [AdminSectionGuardGuard] },
+  { path: 'admin-login', component: AdminLoginComponent },
+  { path: 'admin-logout', component: AdminLogoutComponent },
+  { path: 'admin-registration', component: AdminRegistrationComponent },
+  { path: 'general-notice', component: GeneralNoticeComponent },
+  { path: 'privacy-policy', component: PrivacyPolicyComponent },
+  { path: 'contact', component: ContactComponent },
+  { path: 'settings', component: SettingsComponent, canActivate: [AdminSectionGuardGuard] },
 
-{path: '', redirectTo: 'allappointments', pathMatch: 'full'}
+  { path: '', redirectTo: 'allappointments', pathMatch: 'full' }
 ];
 
 
@@ -107,8 +107,8 @@ const appRoutes: Routes = [
     MatNativeDateModule,
     NgxMaterialTimepickerModule,
     MatProgressSpinnerModule
-    ],
-  providers: [AppointmentService, {provide: MAT_DATE_LOCALE, useValue: 'fr-FR'}, AdminDataSharingService],
+  ],
+  providers: [AppointmentService, { provide: MAT_DATE_LOCALE, useValue: 'fr-FR' }, AdminDataSharingService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

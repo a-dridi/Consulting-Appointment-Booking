@@ -307,7 +307,7 @@ router.route("/appointments/delete/:id").get((req, res) => {
     });
 });
 
-//bookAvailableAppointment - Delete an existing Available Appointment and add it to booked appointment with the clientid
+//bookAvailableAppointment - Delete an existing AvailableAppointment and add it to BookedAppointment with the clientid
 router.route("/appointments/book/:id").post((req, res) => {
 
     var create_payment_json = {
